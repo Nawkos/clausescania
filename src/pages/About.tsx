@@ -16,7 +16,7 @@ const About = () => {
               <ArrowLeft className="w-4 h-4" />
               Back to Home
             </Button>
-            <a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Nawkos/clausescania" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="gap-2">
                 <Github className="w-4 h-4" />
                 View on GitHub
@@ -63,7 +63,7 @@ const About = () => {
               </div>
               <div className="pt-4 border-t">
                 <div className="flex flex-wrap gap-4">
-                  <a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/Nawkos/clausescania" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="gap-2">
                       <Github className="w-4 h-4" />
                       GitHub Repository
@@ -319,7 +319,7 @@ const About = () => {
             <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
               <p className="text-sm">
                 📚 <strong>Full Bibliography:</strong> Complete APA citations and research references available in the 
-                <a href="https://github.com/yourusername/clausescan-ai/blob/main/docs/CITATIONS.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
+                <a href="https://github.com/Nawkos/clausescania/blob/main/docs/CITATIONS.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
                   GitHub repository documentation
                 </a>
               </p>
@@ -336,7 +336,7 @@ const About = () => {
               <div>
                 <h3 className="font-bold mb-2">Step 1: Clone Repository</h3>
                 <div className="bg-muted p-3 rounded-lg font-mono text-sm">
-                  git clone https://github.com/yourusername/clausescan-ai<br/>
+                  git clone https://github.com/Nawkos/clausescania<br/>
                   cd clausescan-ai
                 </div>
               </div>
@@ -451,7 +451,7 @@ const About = () => {
               <div className="mt-4 text-xs text-muted-foreground">
                 <p>
                   📝 <strong>Full Prompt Log:</strong> Complete development conversation history available at{" "}
-                  <a href="https://github.com/yourusername/clausescan-ai/blob/main/docs/PROMPTS.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  <a href="https://github.com/Nawkos/clausescania/blob/main/docs/PROMPTS.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                     /docs/PROMPTS.md
                   </a>
                 </p>
@@ -546,7 +546,7 @@ const About = () => {
               Open Source • Educational Project
             </p>
             <div className="flex justify-center gap-4">
-              <a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Nawkos/clausescania" target="_blank" rel="noopener noreferrer">
                 <Button className="gap-2">
                   <Github className="w-4 h-4" />
                   View on GitHub

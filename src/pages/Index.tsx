@@ -70,7 +70,7 @@ const Index = () => {
               <Button variant="ghost" size="sm" onClick={() => navigate("/about")}>
                 About
               </Button>
-              <a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Nawkos/clausescania" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="sm" className="gap-2">
                   <Github className="w-4 h-4" />
                   GitHub
@@ -479,7 +479,7 @@ const Index = () => {
                 <li><button onClick={() => navigate("/technical-excellence")} className="hover:text-primary transition-colors">Technical Excellence</button></li>
                 <li><button onClick={() => navigate("/about-ai")} className="hover:text-primary transition-colors">AI Models</button></li>
                 <li><button onClick={() => navigate("/about")} className="hover:text-primary transition-colors">About & Credits</button></li>
-                <li><a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub Repository</a></li>
+                <li><a href="https://github.com/Nawkos/clausescania" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub Repository</a></li>
               </ul>
             </div>
 

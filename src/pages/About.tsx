@@ -46,15 +46,15 @@ const About = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm text-muted-foreground">Created By</p>
-                  <p className="font-semibold">Your Name / Team Name</p>
+                  <p className="font-semibold">Groupe 5</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Course</p>
-                  <p className="font-semibold">Advanced AI Algorithms (AAA)</p>
+                  <p className="font-semibold">SPOC IA</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Institution</p>
-                  <p className="font-semibold">Your School Name</p>
+                  <p className="font-semibold">ESSEC BS</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Date</p>

@@ -1,0 +1,10 @@
+# Documentation Folder
+
+This folder contains additional project documentation.
+
+Files to add:
+- USER_GUIDE.md - End-user guide for ClauseScan AI
+- DEVELOPER_GUIDE.md - Technical documentation
+- LOVABLE_PROMPTS.md - AI prompts used during development
+- VIDEO_SCRIPT.md - Demo video script
+- CITATIONS.md - Full bibliography and references

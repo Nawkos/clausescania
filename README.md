@@ -2,11 +2,12 @@
 
 **The Yuka for Contracts - AI-Powered Contract Risk Analysis in 30 Seconds**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://lovable.dev/projects/d5c7e380-af2c-48ec-ab13-9e0679c83f14)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://clausescania.lovable.app)
 
-> **Academic Project:** Advanced AI Algorithms (AAA) - November 2025  
+> **Academic Project:** SPOC IA - November 2025  
 > **Institution:** ESSEC Business School  
-> **Team:** Groupe 20
+> **Team:** Groupe 20  
+> **Live Demo:** https://clausescania.lovable.app
 
 ---
 
@@ -24,6 +25,14 @@ ClauseScan AI is an intelligent contract analysis tool that helps freelancers, s
 - 🤖 **AI-powered** by Google Gemini 2.5 Flash and Legal-BERT
 - 📊 **10,000+ risk patterns** in our database
 - 🟢🟠🔴 **Traffic light scoring** - Instantly see if contract is safe
+
+---
+
+## 🚀 Try It Now
+
+**Live Application:** https://clausescania.lovable.app
+
+Upload any contract (PDF, DOCX, or TXT) and get instant AI-powered risk analysis!
 
 ---
 
@@ -136,11 +145,13 @@ Deployment is automatic via Lovable when you push to GitHub.
 4. **Read Alerts** - Check each problematic clause
 5. **Take Action** - Use recommendations to negotiate or export PDF report
 
+**Try the live demo:** https://clausescania.lovable.app
+
 ---
 
 ## 🎓 Academic Context
 
-This project was created for the **Advanced AI Algorithms (AAA)** course at ESSEC Business School to demonstrate:
+This project was created for the **SPOC IA** course at ESSEC Business School to demonstrate:
 
 ✅ Intelligent orchestration of state-of-the-art AI models  
 ✅ Creative application to solve real-world problems  
@@ -198,8 +209,9 @@ This project was created for the **Advanced AI Algorithms (AAA)** course at ESSE
 **Project Team:** Groupe 20  
 **Email:** b00831880@essec.edu  
 **Institution:** ESSEC Business School  
-**Course:** Advanced AI Algorithms (AAA)  
-**GitHub:** https://github.com/Nawkos/clausescania
+**Course:** SPOC IA  
+**GitHub:** https://github.com/Nawkos/clausescan-ai  
+**Live Demo:** https://clausescania.lovable.app
 
 ---
 
@@ -239,3 +251,5 @@ MIT License - See LICENSE file for details
 **Made with ❤️ and 🤖 AI by Groupe 20 • ESSEC Business School • November 2025**
 
 *"Don't Get Trapped by Hidden Clauses"*
+
+**🚀 Try it now: https://clausescania.lovable.app**

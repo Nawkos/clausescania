@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Shield, ArrowLeft, Download, ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Info } from "lucide-react";
+import { Shield, ArrowLeft, Download, ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Info, Save, Share2, FileText, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -55,7 +55,7 @@ const Analysis = () => {
   }, [location]);
 
   const analyzeContract = async (file?: File, example?: string) => {
-    // Simulate progress updates
+    // Simulate progress updates with fun facts
     const progressSteps = [
       { progress: 0, message: "Reading document..." },
       { progress: 25, message: "Detecting clauses..." },
@@ -190,6 +190,55 @@ const Analysis = () => {
     };
   };
 
+  const handleSaveContract = () => {
+    if (!result) return;
+    
+    const savedContracts = JSON.parse(localStorage.getItem('savedContracts') || '[]');
+    const newContract = {
+      id: Date.now().toString(),
+      name: `${result.contractType} Contract`,
+      date: new Date().toISOString(),
+      score: result.overallScore,
+      riskLevel: result.riskLevel,
+      analysis: result
+    };
+    
+    savedContracts.push(newContract);
+    localStorage.setItem('savedContracts', JSON.stringify(savedContracts));
+    
+    toast({
+      title: "Contract saved",
+      description: "Your analysis has been saved locally",
+    });
+  };
+
+  const handleExportReport = () => {
+    toast({
+      title: "Export feature coming soon",
+      description: "PDF export functionality will be available in the next update",
+    });
+  };
+
+  const handleShare = () => {
+    if (!result) return;
+    
+    const shareText = `Contract Risk Score: ${result.overallScore}/100 - Analyzed with ClauseScan AI`;
+    
+    if (navigator.share) {
+      navigator.share({
+        title: 'ClauseScan AI Report',
+        text: shareText,
+        url: window.location.href
+      });
+    } else {
+      navigator.clipboard.writeText(shareText);
+      toast({
+        title: "Copied to clipboard",
+        description: "Share your results with others",
+      });
+    }
+  };
+
   const toggleAlert = (id: string) => {
     const newExpanded = new Set(expandedAlerts);
     if (newExpanded.has(id)) {
@@ -218,18 +267,32 @@ const Analysis = () => {
     }
   };
 
+  const getSeverityEmoji = (severity: string) => {
+    switch (severity) {
+      case "critical": return "⚠️";
+      case "moderate": return "⚡";
+      case "attention": return "💡";
+      default: return "ℹ️";
+    }
+  };
+
   if (isAnalyzing) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <Card className="w-full max-w-md p-8">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950 dark:via-purple-950 dark:to-pink-950 flex items-center justify-center p-4">
+        <Card className="w-full max-w-md p-8 shadow-2xl border-2">
           <div className="text-center">
-            <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6 animate-pulse">
-              <Shield className="w-10 h-10 text-primary" />
+            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mx-auto mb-6 animate-pulse shadow-lg">
+              <Shield className="w-12 h-12 text-white" />
             </div>
             <h2 className="text-2xl font-bold mb-2">Analyzing Contract</h2>
             <p className="text-muted-foreground mb-6">{statusMessage}</p>
-            <Progress value={progress} className="mb-4" />
-            <p className="text-sm text-muted-foreground">~30 seconds</p>
+            <Progress value={progress} className="mb-4 h-3" />
+            <p className="text-sm text-muted-foreground mb-4">~30 seconds</p>
+            <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-950 rounded-lg">
+              <p className="text-sm text-muted-foreground">
+                💡 <strong>Did you know?</strong> The longest contract ever was 456 pages for a single property sale!
+              </p>
+            </div>
           </div>
         </Card>
       </div>
@@ -242,19 +305,45 @@ const Analysis = () => {
   const moderateAlerts = result.alerts.filter(a => a.severity === "moderate");
   const attentionAlerts = result.alerts.filter(a => a.severity === "attention");
 
+  const getRiskGradient = () => {
+    switch (result.riskLevel) {
+      case "danger": return "from-red-500 to-red-600";
+      case "caution": return "from-orange-500 to-orange-600";
+      case "safe": return "from-green-500 to-green-600";
+      default: return "from-gray-500 to-gray-600";
+    }
+  };
+
+  const getRiskBg = () => {
+    switch (result.riskLevel) {
+      case "danger": return "bg-red-100 dark:bg-red-900";
+      case "caution": return "bg-orange-100 dark:bg-orange-900";
+      case "safe": return "bg-green-100 dark:bg-green-900";
+      default: return "bg-gray-100 dark:bg-gray-900";
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Button variant="ghost" onClick={() => navigate("/")}>
+            <Button variant="ghost" onClick={() => navigate("/")} className="hover:bg-primary/10">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back
             </Button>
             <div className="flex items-center gap-3">
-              <Button variant="outline">
+              <Button variant="outline" onClick={handleShare} className="hover:bg-blue-50 dark:hover:bg-blue-950">
+                <Share2 className="w-4 h-4 mr-2" />
+                Share
+              </Button>
+              <Button variant="outline" onClick={handleSaveContract} className="hover:bg-green-50 dark:hover:bg-green-950">
+                <Save className="w-4 h-4 mr-2" />
+                Save
+              </Button>
+              <Button variant="outline" onClick={handleExportReport} className="hover:bg-purple-50 dark:hover:bg-purple-950">
                 <Download className="w-4 h-4 mr-2" />
-                Export Report
+                Export PDF
               </Button>
             </div>
           </div>
@@ -262,38 +351,42 @@ const Analysis = () => {
       </header>
 
       <div className="container mx-auto px-4 py-8 max-w-5xl">
-        {/* Overall Score Card */}
-        <Card className="p-8 mb-8">
+        {/* Overall Score Card - Enhanced */}
+        <Card className="p-8 mb-8 shadow-2xl border-2 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
           <div className="text-center">
-            <h1 className="text-2xl font-bold mb-6">OVERALL RISK SCORE</h1>
+            <h1 className="text-3xl font-bold mb-8">OVERALL RISK SCORE</h1>
             
-            <div className={`inline-flex items-center justify-center w-32 h-32 rounded-full mb-6 ${
-              result.riskLevel === "danger" ? "bg-danger/10" :
-              result.riskLevel === "caution" ? "bg-warning/10" :
-              "bg-success/10"
-            }`}>
-              <span className={`text-5xl font-bold ${
-                result.riskLevel === "danger" ? "text-danger" :
-                result.riskLevel === "caution" ? "text-warning" :
-                "text-success"
+            {/* Larger Score Circle with Radial Gradient */}
+            <div className="relative inline-block mb-8">
+              <div className={`absolute inset-0 rounded-full ${getRiskGradient()} bg-gradient-to-r opacity-20 blur-3xl scale-110`} />
+              <div className={`relative w-40 h-40 md:w-48 md:h-48 rounded-full ${getRiskBg()} flex items-center justify-center shadow-2xl ring-8 ${
+                result.riskLevel === "danger" ? "ring-red-200 dark:ring-red-800" :
+                result.riskLevel === "caution" ? "ring-orange-200 dark:ring-orange-800" :
+                "ring-green-200 dark:ring-green-800"
               }`}>
-                {result.overallScore}
-              </span>
+                <span className={`text-6xl md:text-7xl font-bold ${
+                  result.riskLevel === "danger" ? "text-red-600" :
+                  result.riskLevel === "caution" ? "text-orange-600" :
+                  "text-green-600"
+                }`}>
+                  {result.overallScore}
+                </span>
+              </div>
             </div>
 
             <Progress 
               value={result.overallScore} 
-              className={`mb-6 ${
-                result.riskLevel === "danger" ? "[&>div]:bg-danger" :
-                result.riskLevel === "caution" ? "[&>div]:bg-warning" :
-                "[&>div]:bg-success"
+              className={`mb-6 h-4 ${
+                result.riskLevel === "danger" ? "[&>div]:bg-gradient-to-r [&>div]:from-red-500 [&>div]:to-red-600" :
+                result.riskLevel === "caution" ? "[&>div]:bg-gradient-to-r [&>div]:from-orange-500 [&>div]:to-orange-600" :
+                "[&>div]:bg-gradient-to-r [&>div]:from-green-500 [&>div]:to-green-600"
               }`}
             />
 
-            <div className={`text-xl font-semibold mb-6 ${
-              result.riskLevel === "danger" ? "text-danger" :
-              result.riskLevel === "caution" ? "text-warning" :
-              "text-success"
+            <div className={`text-2xl font-semibold mb-8 ${
+              result.riskLevel === "danger" ? "text-red-600" :
+              result.riskLevel === "caution" ? "text-orange-600" :
+              "text-green-600"
             }`}>
               {result.riskLevel === "danger" && "⚠️ DANGER LEVEL - Do Not Sign Without Changes"}
               {result.riskLevel === "caution" && "⚠️ CAUTION - Review Carefully"}
@@ -301,96 +394,147 @@ const Analysis = () => {
             </div>
 
             <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <p className="text-2xl font-bold text-danger">{criticalAlerts.length}</p>
+              <div className="p-4 bg-red-50 dark:bg-red-950 rounded-xl">
+                <p className="text-3xl font-bold text-red-600">{criticalAlerts.length}</p>
                 <p className="text-sm text-muted-foreground">Critical Issues</p>
               </div>
-              <div>
-                <p className="text-2xl font-bold text-warning">{moderateAlerts.length}</p>
+              <div className="p-4 bg-orange-50 dark:bg-orange-950 rounded-xl">
+                <p className="text-3xl font-bold text-orange-600">{moderateAlerts.length}</p>
                 <p className="text-sm text-muted-foreground">Moderate Concerns</p>
               </div>
-              <div>
-                <p className="text-2xl font-bold text-muted-foreground">{attentionAlerts.length}</p>
+              <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">
+                <p className="text-3xl font-bold text-gray-600 dark:text-gray-400">{attentionAlerts.length}</p>
                 <p className="text-sm text-muted-foreground">Minor Points</p>
               </div>
             </div>
           </div>
         </Card>
 
-        {/* Market Comparison */}
-        <Card className="p-6 mb-8">
-          <h2 className="text-xl font-bold mb-4">📊 Market Comparison</h2>
-          <div className="space-y-3">
-            <div className="flex justify-between items-center">
-              <span>Your Contract:</span>
-              <span className={`font-bold ${
-                result.riskLevel === "danger" ? "text-danger" :
-                result.riskLevel === "caution" ? "text-warning" :
-                "text-success"
-              }`}>{result.overallScore}/100</span>
+        {/* Market Comparison - Enhanced with Animated Progress */}
+        <Card className="p-6 mb-8 shadow-lg border-2 hover:shadow-2xl transition-shadow">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            📊 Market Comparison
+          </h2>
+          <div className="space-y-4">
+            <div>
+              <div className="flex justify-between items-center mb-2">
+                <span className="font-medium">Your Contract:</span>
+                <span className={`font-bold text-lg ${
+                  result.riskLevel === "danger" ? "text-red-600" :
+                  result.riskLevel === "caution" ? "text-orange-600" :
+                  "text-green-600"
+                }`}>{result.overallScore}/100</span>
+              </div>
+              <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div 
+                  className={`h-full ${getRiskGradient()} bg-gradient-to-r rounded-full transition-all duration-1000`}
+                  style={{ width: `${result.overallScore}%` }}
+                />
+              </div>
             </div>
-            <div className="flex justify-between items-center">
-              <span>Industry Average:</span>
-              <span className="font-bold text-success">{result.marketComparison.averageScore}/100</span>
+
+            <div>
+              <div className="flex justify-between items-center mb-2">
+                <span className="font-medium">Industry Average:</span>
+                <span className="font-bold text-lg text-green-600">{result.marketComparison.averageScore}/100</span>
+              </div>
+              <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full transition-all duration-1000"
+                  style={{ width: `${result.marketComparison.averageScore}%`, transitionDelay: '0.2s' }}
+                />
+              </div>
             </div>
-            <div className="flex justify-between items-center">
-              <span>Best Seen:</span>
-              <span className="font-bold text-success">{result.marketComparison.bestScore}/100</span>
+
+            <div>
+              <div className="flex justify-between items-center mb-2">
+                <span className="font-medium">Best Seen:</span>
+                <span className="font-bold text-lg text-green-600">{result.marketComparison.bestScore}/100</span>
+              </div>
+              <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full transition-all duration-1000"
+                  style={{ width: `${result.marketComparison.bestScore}%`, transitionDelay: '0.4s' }}
+                />
+              </div>
             </div>
-            <div className="mt-4 p-4 bg-warning/10 rounded-lg">
-              <p className="text-sm">
-                ⚠️ This contract is riskier than <strong>{result.marketComparison.percentile}%</strong> of similar contracts in our database
+
+            <div className="mt-6 p-4 bg-orange-50 dark:bg-orange-950 rounded-xl border-2 border-orange-200 dark:border-orange-800">
+              <p className="text-sm font-medium">
+                ⚠️ This contract is riskier than <strong className="text-lg">{result.marketComparison.percentile}%</strong> of similar contracts in our database
               </p>
             </div>
           </div>
         </Card>
 
-        {/* Critical Alerts */}
+        {/* Critical Alerts - Enhanced */}
         {criticalAlerts.length > 0 && (
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 text-danger">🔴 CRITICAL ALERTS (Must Negotiate)</h2>
+            <h2 className="text-3xl font-bold mb-6 text-red-600 flex items-center gap-2">
+              🔴 CRITICAL ALERTS
+              <span className="text-sm font-normal text-muted-foreground">(Must Negotiate)</span>
+            </h2>
             <div className="space-y-4">
               {criticalAlerts.map((alert) => {
                 const Icon = getSeverityIcon(alert.severity);
                 const isExpanded = expandedAlerts.has(alert.id);
                 
                 return (
-                  <Card key={alert.id} className="overflow-hidden border-l-4 border-l-danger">
+                  <Card key={alert.id} className="overflow-hidden border-l-[6px] border-l-red-500 shadow-lg hover:shadow-2xl transition-all duration-300">
                     <button
                       onClick={() => toggleAlert(alert.id)}
-                      className="w-full p-6 text-left hover:bg-muted/50 transition-colors"
+                      className="w-full p-6 text-left hover:bg-red-50/50 dark:hover:bg-red-950/50 transition-colors"
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3 flex-1">
-                          <Icon className="w-5 h-5 text-danger mt-1 flex-shrink-0" />
+                          <div className="w-10 h-10 rounded-lg bg-red-100 dark:bg-red-900 flex items-center justify-center flex-shrink-0">
+                            <span className="text-lg">{getSeverityEmoji(alert.severity)}</span>
+                          </div>
                           <div className="flex-1">
-                            <h3 className="font-semibold text-lg mb-1">
-                              Alert #{alert.id} - Clause {alert.clauseNumber} (Page {alert.page})
+                            <h3 className="font-semibold text-lg mb-1 flex items-center gap-2">
+                              {alert.title}
+                              <span className="text-xs px-2 py-1 rounded-full bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300">
+                                Clause {alert.clauseNumber}
+                              </span>
                             </h3>
-                            <p className="text-muted-foreground">{alert.title}</p>
-                            <p className="mt-2 text-sm italic">"{alert.excerpt}"</p>
+                            <p className="text-sm text-muted-foreground mb-2">Page {alert.page}</p>
+                            <p className="mt-2 text-sm italic bg-gray-50 dark:bg-gray-800 p-3 rounded-lg border-l-4 border-red-500">
+                              "{alert.excerpt}"
+                            </p>
                           </div>
                         </div>
-                        {isExpanded ? (
-                          <ChevronUp className="w-5 h-5 text-muted-foreground flex-shrink-0" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
-                        )}
+                        <div className="ml-4 flex-shrink-0">
+                          {isExpanded ? (
+                            <ChevronUp className="w-5 h-5 text-muted-foreground transition-transform" />
+                          ) : (
+                            <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform" />
+                          )}
+                        </div>
                       </div>
                     </button>
                     
                     {isExpanded && (
-                      <div className="px-6 pb-6 pt-2 space-y-4 border-t">
-                        <div>
-                          <h4 className="font-semibold text-danger mb-2">❌ PROBLEM:</h4>
+                      <div className="px-6 pb-6 pt-2 space-y-4 border-t bg-gradient-to-br from-white to-red-50/30 dark:from-gray-900 dark:to-red-950/30 animate-fade-in">
+                        <div className="p-4 bg-red-50 dark:bg-red-950 rounded-lg border border-red-200 dark:border-red-800">
+                          <h4 className="font-semibold text-red-600 mb-2 flex items-center gap-2">
+                            <X className="w-4 h-4" />
+                            PROBLEM:
+                          </h4>
                           <p className="text-sm">{alert.problem}</p>
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-success mb-2">✅ RECOMMENDATION:</h4>
+                        <div className="p-4 bg-green-50 dark:bg-green-950 rounded-lg border border-green-200 dark:border-green-800">
+                          <h4 className="font-semibold text-green-600 mb-2 flex items-center gap-2">
+                            <CheckCircle2 className="w-4 h-4" />
+                            RECOMMENDATION:
+                          </h4>
                           <p className="text-sm">{alert.recommendation}</p>
                         </div>
-                        <div className="pt-2">
+                        <div className="pt-2 flex items-center justify-between">
                           <p className="text-xs text-muted-foreground">📍 LOCATION: Page {alert.page}, Clause {alert.clauseNumber}</p>
+                          <Button variant="outline" size="sm">
+                            <FileText className="w-4 h-4 mr-2" />
+                            View in Document
+                          </Button>
                         </div>
                       </div>
                     )}
@@ -401,52 +545,65 @@ const Analysis = () => {
           </div>
         )}
 
-        {/* Moderate Alerts */}
+        {/* Moderate Alerts - Enhanced */}
         {moderateAlerts.length > 0 && (
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 text-warning">🟠 MODERATE ALERTS (Strongly Advise Review)</h2>
+            <h2 className="text-3xl font-bold mb-6 text-orange-600 flex items-center gap-2">
+              🟠 MODERATE ALERTS
+              <span className="text-sm font-normal text-muted-foreground">(Strongly Advise Review)</span>
+            </h2>
             <div className="space-y-4">
               {moderateAlerts.map((alert) => {
-                const Icon = getSeverityIcon(alert.severity);
                 const isExpanded = expandedAlerts.has(alert.id);
                 
                 return (
-                  <Card key={alert.id} className="overflow-hidden border-l-4 border-l-warning">
+                  <Card key={alert.id} className="overflow-hidden border-l-[6px] border-l-orange-500 shadow-lg hover:shadow-2xl transition-all duration-300">
                     <button
                       onClick={() => toggleAlert(alert.id)}
-                      className="w-full p-6 text-left hover:bg-muted/50 transition-colors"
+                      className="w-full p-6 text-left hover:bg-orange-50/50 dark:hover:bg-orange-950/50 transition-colors"
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-3 flex-1">
-                          <Icon className="w-5 h-5 text-warning mt-1 flex-shrink-0" />
+                          <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900 flex items-center justify-center flex-shrink-0">
+                            <span className="text-lg">{getSeverityEmoji(alert.severity)}</span>
+                          </div>
                           <div className="flex-1">
-                            <h3 className="font-semibold text-lg mb-1">
-                              Alert #{alert.id} - Clause {alert.clauseNumber} (Page {alert.page})
+                            <h3 className="font-semibold text-lg mb-1 flex items-center gap-2">
+                              {alert.title}
+                              <span className="text-xs px-2 py-1 rounded-full bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300">
+                                Clause {alert.clauseNumber}
+                              </span>
                             </h3>
-                            <p className="text-muted-foreground">{alert.title}</p>
-                            <p className="mt-2 text-sm italic">"{alert.excerpt}"</p>
+                            <p className="text-sm text-muted-foreground mb-2">Page {alert.page}</p>
+                            <p className="mt-2 text-sm italic bg-gray-50 dark:bg-gray-800 p-3 rounded-lg border-l-4 border-orange-500">
+                              "{alert.excerpt}"
+                            </p>
                           </div>
                         </div>
-                        {isExpanded ? (
-                          <ChevronUp className="w-5 h-5 text-muted-foreground flex-shrink-0" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
-                        )}
+                        <div className="ml-4 flex-shrink-0">
+                          {isExpanded ? (
+                            <ChevronUp className="w-5 h-5 text-muted-foreground transition-transform" />
+                          ) : (
+                            <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform" />
+                          )}
+                        </div>
                       </div>
                     </button>
                     
                     {isExpanded && (
-                      <div className="px-6 pb-6 pt-2 space-y-4 border-t">
-                        <div>
-                          <h4 className="font-semibold text-warning mb-2">⚠️ PROBLEM:</h4>
+                      <div className="px-6 pb-6 pt-2 space-y-4 border-t bg-gradient-to-br from-white to-orange-50/30 dark:from-gray-900 dark:to-orange-950/30 animate-fade-in">
+                        <div className="p-4 bg-orange-50 dark:bg-orange-950 rounded-lg border border-orange-200 dark:border-orange-800">
+                          <h4 className="font-semibold text-orange-600 mb-2 flex items-center gap-2">
+                            ⚠️ PROBLEM:
+                          </h4>
                           <p className="text-sm">{alert.problem}</p>
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-success mb-2">✅ RECOMMENDATION:</h4>
+                        <div className="p-4 bg-green-50 dark:bg-green-950 rounded-lg border border-green-200 dark:border-green-800">
+                          <h4 className="font-semibold text-green-600 mb-2 flex items-center gap-2">
+                            <CheckCircle2 className="w-4 h-4" />
+                            RECOMMENDATION:
+                          </h4>
                           <p className="text-sm">{alert.recommendation}</p>
-                        </div>
-                        <div className="pt-2">
-                          <p className="text-xs text-muted-foreground">📍 LOCATION: Page {alert.page}, Clause {alert.clauseNumber}</p>
                         </div>
                       </div>
                     )}
@@ -457,19 +614,25 @@ const Analysis = () => {
           </div>
         )}
 
-        {/* Missing Clauses */}
+        {/* Missing Clauses - Enhanced */}
         {result.missingClauses.length > 0 && (
-          <Card className="p-6 mb-8">
-            <h2 className="text-xl font-bold mb-4">💡 MISSING CLAUSES</h2>
-            <p className="text-muted-foreground mb-4">Important protections not found in this contract:</p>
-            <ul className="space-y-2">
-              {result.missingClauses.map((clause, idx) => (
-                <li key={idx} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  {clause}
-                </li>
+          <Card className="p-6 mb-8 shadow-lg border-2">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              📋 Missing Protections
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              These important clauses are missing from your contract and should be added:
+            </p>
+            <div className="space-y-2">
+              {result.missingClauses.map((clause, index) => (
+                <div key={index} className="flex items-center gap-3 p-3 bg-yellow-50 dark:bg-yellow-950 rounded-lg border border-yellow-200 dark:border-yellow-800">
+                  <div className="w-6 h-6 rounded-full bg-yellow-200 dark:bg-yellow-800 flex items-center justify-center flex-shrink-0">
+                    <span className="text-xs font-bold text-yellow-700 dark:text-yellow-300">{index + 1}</span>
+                  </div>
+                  <span className="font-medium">{clause}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </Card>
         )}
       </div>

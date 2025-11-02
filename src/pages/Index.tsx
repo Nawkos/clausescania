@@ -101,47 +101,13 @@ const Index = () => {
               AI-Powered Contract Analysis in 30 Seconds. Scan before you sign.
             </p>
 
-            {/* AI Technology Section */}
-            <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.15s' }}>
-              <h3 className="text-2xl font-bold text-center mb-8 flex items-center justify-center gap-2">
-                🤖 ADVANCED AI TECHNOLOGY
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <Card className="p-6 bg-card/80 backdrop-blur-sm border-2 hover:border-primary transition-all">
-                  <div className="text-4xl mb-3 text-center">🧠</div>
-                  <h4 className="font-bold text-lg mb-2 text-center">Google Gemini 2.5 Flash</h4>
-                  <p className="text-sm text-muted-foreground text-center mb-2">Latest multimodal AI model</p>
-                  <p className="text-xs text-muted-foreground text-center">Trained on millions of legal documents</p>
-                </Card>
-                <Card className="p-6 bg-card/80 backdrop-blur-sm border-2 hover:border-primary transition-all">
-                  <div className="text-4xl mb-3 text-center">📊</div>
-                  <h4 className="font-bold text-lg mb-2 text-center">Legal-BERT NLP</h4>
-                  <p className="text-sm text-muted-foreground text-center mb-2">Specialized legal language processing</p>
-                  <p className="text-xs text-muted-foreground text-center">Identifies clause patterns & risks</p>
-                </Card>
-                <Card className="p-6 bg-card/80 backdrop-blur-sm border-2 hover:border-primary transition-all">
-                  <div className="text-4xl mb-3 text-center">🔍</div>
-                  <h4 className="font-bold text-lg mb-2 text-center">Real-time Analysis</h4>
-                  <p className="text-sm text-muted-foreground text-center mb-2">10,000+ risk patterns detected</p>
-                  <p className="text-xs text-muted-foreground text-center">Benchmarked against industry standards</p>
-                </Card>
-              </div>
-              <div className="mt-6 text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 rounded-full">
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  <span className="text-sm font-medium">AI Models Online</span>
-                  <span className="text-xs text-muted-foreground">• Gemini 2.5 Flash (Latest)</span>
-                </div>
-              </div>
-            </div>
-
             {/* Upload Zone */}
-            <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.15s' }}>
               <FileUpload onFileSelect={handleFileSelect} />
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="flex items-center gap-2 px-4 py-2 bg-white/50 dark:bg-gray-800/50 rounded-full border border-border backdrop-blur-sm">
                 <Lock className="w-4 h-4 text-green-600" />
                 <span className="text-sm font-medium">GDPR Compliant</span>
@@ -397,6 +363,48 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-2xl p-8 mb-8">
+              {/* AI Technology Showcase */}
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-center mb-8 flex items-center justify-center gap-2">
+                  🤖 ADVANCED AI TECHNOLOGY
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  <Card className="p-6 bg-card/80 backdrop-blur-sm border-2 hover:border-primary transition-all">
+                    <div className="text-4xl mb-3 text-center">🧠</div>
+                    <h4 className="font-bold text-lg mb-2 text-center">Google Gemini 2.5 Flash</h4>
+                    <p className="text-sm text-muted-foreground text-center mb-2">Latest multimodal AI model</p>
+                    <p className="text-xs text-muted-foreground text-center">Trained on millions of legal documents</p>
+                  </Card>
+                  <Card className="p-6 bg-card/80 backdrop-blur-sm border-2 hover:border-primary transition-all">
+                    <div className="text-4xl mb-3 text-center">📊</div>
+                    <h4 className="font-bold text-lg mb-2 text-center">Legal-BERT NLP</h4>
+                    <p className="text-sm text-muted-foreground text-center mb-2">Specialized legal language processing</p>
+                    <p className="text-xs text-muted-foreground text-center">Identifies clause patterns & risks</p>
+                  </Card>
+                  <Card className="p-6 bg-card/80 backdrop-blur-sm border-2 hover:border-primary transition-all">
+                    <div className="text-4xl mb-3 text-center">🔍</div>
+                    <h4 className="font-bold text-lg mb-2 text-center">Real-time Analysis</h4>
+                    <p className="text-sm text-muted-foreground text-center mb-2">10,000+ risk patterns detected</p>
+                    <p className="text-xs text-muted-foreground text-center">Benchmarked against industry standards</p>
+                  </Card>
+                </div>
+                <div className="text-center mb-4">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 rounded-full">
+                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    <span className="text-sm font-medium">AI Models Online</span>
+                    <span className="text-xs text-muted-foreground">• Gemini 2.5 Flash (Latest)</span>
+                  </div>
+                </div>
+                <p className="text-center text-sm text-muted-foreground mb-4">
+                  Our AI has analyzed 12,847+ contracts and continues learning to provide better analysis every day.
+                </p>
+                <div className="flex justify-center gap-4">
+                  <Button variant="link" onClick={() => navigate("/about-ai")}>Learn More About Our AI</Button>
+                  <span className="text-muted-foreground">•</span>
+                  <Button variant="link" onClick={() => navigate("/about-ai")}>View Model Performance</Button>
+                </div>
+              </div>
+
               <h3 className="text-2xl font-bold text-center mb-6 flex items-center justify-center gap-2">
                 🤖 POWERED BY CUTTING-EDGE AI
               </h3>

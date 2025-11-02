@@ -58,14 +58,14 @@ const Index = () => {
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-4">
-              <Button variant="ghost" size="sm" onClick={() => navigate("/getting-started")}>
-                Get Started
+              <Button variant="ghost" size="sm" onClick={() => navigate("/user-guide")}>
+                User Guide
               </Button>
               <Button variant="ghost" size="sm" onClick={() => navigate("/how-it-works")}>
                 How It Works
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => navigate("/about-ai")}>
-                AI Models
+              <Button variant="ghost" size="sm" onClick={() => navigate("/technical-excellence")}>
+                Tech Details
               </Button>
               <Button variant="ghost" size="sm" onClick={() => navigate("/about")}>
                 About
@@ -463,23 +463,23 @@ const Index = () => {
 
             {/* Product */}
             <div>
-              <h4 className="font-semibold mb-4">Product</h4>
+              <h4 className="font-semibold mb-4">Documentation</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#how-it-works" className="hover:text-primary transition-colors">How it Works</a></li>
-                <li><a href="#examples" className="hover:text-primary transition-colors">Examples</a></li>
-                <li><a href="/about-ai" className="hover:text-primary transition-colors">AI Technology</a></li>
-                <li><a href="/about" className="hover:text-primary transition-colors">About Project</a></li>
+                <li><button onClick={() => navigate("/user-guide")} className="hover:text-primary transition-colors">User Guide</button></li>
+                <li><button onClick={() => navigate("/getting-started")} className="hover:text-primary transition-colors">Getting Started</button></li>
+                <li><button onClick={() => navigate("/how-it-works")} className="hover:text-primary transition-colors">How It Works</button></li>
+                <li><button onClick={() => navigate("/developer-guide")} className="hover:text-primary transition-colors">Developer Guide</button></li>
               </ul>
             </div>
 
             {/* Company */}
             <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
+              <h4 className="font-semibold mb-4">Technical</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/about" className="hover:text-primary transition-colors">About</a></li>
-                <li><a href="/about#privacy" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-                <li><a href="/about#terms" className="hover:text-primary transition-colors">Terms of Service</a></li>
-                <li><a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Documentation</a></li>
+                <li><button onClick={() => navigate("/technical-excellence")} className="hover:text-primary transition-colors">Technical Excellence</button></li>
+                <li><button onClick={() => navigate("/about-ai")} className="hover:text-primary transition-colors">AI Models</button></li>
+                <li><button onClick={() => navigate("/about")} className="hover:text-primary transition-colors">About & Credits</button></li>
+                <li><a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub Repository</a></li>
               </ul>
             </div>
 

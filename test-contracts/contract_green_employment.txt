@@ -1,307 +1,144 @@
-EMPLOYMENT AGREEMENT
+EMPLOYMENT CONTRACT (CDI - Contrat à Durée Indéterminée)
 
-This Employment Agreement ("Agreement") is entered into as of December 1, 2025 ("Start Date"), by and between:
+This Employment Contract is entered into on November 2, 2025, between:
 
-EMPLOYER: InnovateTech Solutions Ltd.
-Registered Address: 100 Innovation Way, Cambridge, CB2 1AA, United Kingdom
-Company Number: 12345678
+EMPLOYER: InnovateTech France SAS
+Address: 56 Boulevard Haussmann, 75008 Paris, France
+SIRET: 123 456 789 00012
 ("Employer" or "Company")
 
-and
+AND
 
-EMPLOYEE: Sarah Williams
-Address: 45 Residential Lane, Cambridge, CB3 9AB, United Kingdom
-National Insurance Number: AB 12 34 56 C
+EMPLOYEE: Sophie Martin
+Address: 28 Rue de Rivoli, 75004 Paris, France
+Social Security Number: 1 85 03 75 116 234 56
 ("Employee")
 
-The parties agree as follows:
-
-1. POSITION AND DUTIES
-
-1.1 Position
-The Employee is employed as Senior Software Engineer, reporting to the Head of Engineering.
-
-1.2 Duties and Responsibilities
-The Employee shall:
-   a) Design, develop, and maintain software applications as directed
-   b) Participate in code reviews and technical planning meetings
-   c) Mentor junior developers as appropriate
-   d) Contribute to the improvement of development processes
-   e) Perform other duties as reasonably assigned and consistent with the position
-
-1.3 Standard of Performance
-The Employee shall perform duties diligently, professionally, and to the best of their ability.
-
-1.4 Policies and Procedures
-The Employee agrees to comply with all Company policies, procedures, and lawful directions, as may be updated from time to time.
-
-2. TERM OF EMPLOYMENT
-
-2.1 Commencement
-Employment commences on December 1, 2025.
-
-2.2 Probationary Period
-The first three (3) months shall constitute a probationary period during which either party may terminate employment with one (1) week's written notice.
-
-2.3 Continuing Employment
-Upon successful completion of the probationary period, employment continues indefinitely subject to the terms of this Agreement.
-
-3. COMPENSATION AND BENEFITS
-
-3.1 Base Salary
-The Employee shall receive an annual salary of £65,000, payable in equal monthly installments on the last business day of each month, subject to applicable tax withholdings.
-
-3.2 Salary Review
-The Company will review the Employee's salary annually, typically in January. Any increase is at the Company's discretion based on performance and market conditions.
-
-3.3 Performance Bonus
-The Employee is eligible to participate in the Company's annual performance bonus scheme, with a target bonus of 10% of base salary. Actual bonus amount depends on Company and individual performance and is paid in February following the performance year.
-
-3.4 Pension Scheme
-The Company will contribute to the Employee's workplace pension in accordance with UK auto-enrolment requirements. Currently, the Company contributes 5% of salary if the Employee contributes at least 3%.
-
-3.5 Health Insurance
-The Company provides private health insurance for the Employee through Bupa, including dental and optical coverage. Coverage begins on the Start Date.
-
-3.6 Life Insurance
-The Company provides life insurance coverage equal to four times annual salary at no cost to the Employee.
-
-3.7 Stock Options
-Subject to Board approval, the Employee will be granted options to purchase 10,000 shares of Company stock at the current fair market value. Options vest over four years: 25% after one year, then monthly thereafter. Full details are in the Stock Option Agreement.
-
-3.8 Professional Development
-The Company provides an annual professional development budget of £2,000 for conferences, courses, and certifications relevant to the Employee's role.
-
-4. WORKING HOURS AND LOCATION
-
-4.1 Standard Hours
-Normal working hours are 9:00 AM to 5:30 PM, Monday through Friday, with one hour for lunch (37.5 hours per week).
-
-4.2 Flexible Working
-The Company operates flexible working hours. Employees may adjust start/end times with manager approval, provided core hours (10 AM - 3 PM) are covered.
-
-4.3 Remote Work
-The Employee may work remotely up to two (2) days per week with manager approval. The Company will provide necessary equipment for remote work.
-
-4.4 Primary Workplace
-The Employee's primary workplace is the Company's Cambridge office, though business needs may occasionally require work at other locations.
-
-4.5 Overtime
-As a salaried employee, the position is exempt from overtime pay. However, the Company expects working hours to be reasonable and will monitor workload to ensure a healthy work-life balance.
-
-5. HOLIDAY AND LEAVE
-
-5.1 Annual Holiday
-The Employee is entitled to 25 days of paid holiday per year, plus eight UK bank holidays (33 days total).
-
-5.2 Holiday Accrual
-Holiday entitlement accrues monthly. During the first year, entitlement is prorated.
-
-5.3 Holiday Scheduling
-Holiday must be requested through the Company's system with reasonable advance notice (typically two weeks for short absences, four weeks for absences exceeding one week). Approval is subject to business needs.
-
-5.4 Holiday Carryover
-Up to five (5) unused holiday days may be carried over to the next year, with manager approval. Carried-over days must be used by March 31.
-
-5.5 Statutory Leave
-The Employee is entitled to statutory leave as provided by UK law, including:
-   a) Sick leave (with Statutory Sick Pay after three days)
-   b) Maternity/Paternity leave
-   c) Parental leave
-   d) Bereavement leave (five paid days for immediate family)
-
-5.6 Company Enhanced Leave
-In addition to statutory entitlements, the Company provides:
-   a) Full salary for first 10 days of sick leave per year (then SSP)
-   b) Enhanced maternity/paternity pay (12 weeks full pay, 14 weeks half pay)
-   c) Three paid days for moving house
-   d) Paid time off for medical appointments
-
-6. INTELLECTUAL PROPERTY
-
-6.1 Work Product Ownership
-All work product, inventions, and intellectual property created by the Employee during employment and within the scope of employment duties shall be the property of the Company.
-
-6.2 Definition of Work Product
-"Work product" includes all software code, designs, documentation, processes, and other materials created for the Company or using Company resources.
-
-6.3 Assignment
-The Employee agrees to execute any documents necessary to confirm the Company's ownership of work product.
-
-6.4 Pre-Existing IP
-Intellectual property created by the Employee before employment or outside of employment duties using personal resources remains the Employee's property, provided it does not:
-   a) Relate to the Company's business or actual or demonstrably anticipated research
-   b) Result from work performed for the Company
-   c) Use Company confidential information or resources
-
-6.5 Disclosure of Prior IP
-The Employee has disclosed any pre-existing intellectual property that might be relevant to their employment (see Appendix A, or none if not applicable).
-
-6.6 Open Source Contribution
-The Employee may contribute to open-source projects outside working hours with manager approval, provided contributions do not conflict with Company interests or use Company confidential information.
-
-7. CONFIDENTIALITY
-
-7.1 Confidential Information
-The Employee acknowledges access to Company confidential information, including business strategies, customer data, source code, financial information, and trade secrets.
-
-7.2 Non-Disclosure Obligation
-The Employee agrees to:
-   a) Maintain confidentiality of all Company confidential information
-   b) Use confidential information only for Company business purposes
-   c) Not disclose confidential information to third parties without authorization
-   d) Return all confidential materials upon termination
-
-7.3 Exceptions
-These obligations do not apply to information that:
-   a) Is publicly available through no fault of the Employee
-   b) Must be disclosed by law (provided the Employee gives advance notice to the Company if legally permitted)
-   c) Is independently developed by the Employee without using Company confidential information
-
-7.4 Survival
-Confidentiality obligations survive termination of employment indefinitely.
-
-8. DATA PROTECTION
-
-8.1 Employee Data
-The Company processes Employee personal data in accordance with UK GDPR and the Data Protection Act 2018. Details are in the Employee Privacy Notice.
-
-8.2 Customer Data
-In the course of employment, the Employee may process customer or other third-party personal data. The Employee agrees to comply with all applicable data protection laws and Company data protection policies.
-
-9. TERMINATION
-
-9.1 Notice Period - Post Probation
-After the probationary period, either party may terminate employment by giving three (3) months' written notice.
-
-9.2 Company Right to Pay in Lieu
-The Company may elect to pay salary in lieu of all or part of the notice period (garden leave).
-
-9.3 Summary Dismissal
-The Company may terminate employment immediately without notice or payment in lieu for gross misconduct, including but not limited to:
-   a) Serious breach of Company policies
-   b) Theft or fraud
-   c) Serious negligence
-   d) Conduct bringing the Company into disrepute
-   e) Material breach of this Agreement
-
-9.4 Return of Property
-Upon termination, the Employee must immediately return all Company property, including laptop, phone, access cards, and documents.
-
-9.5 Post-Termination Obligations
-Obligations regarding confidentiality, intellectual property, and non-disparagement survive termination.
-
-10. RESTRICTIVE COVENANTS
-
-10.1 Non-Compete - Limited and Reasonable
-For six (6) months following termination, the Employee agrees not to work for a direct competitor in a similar role, where "direct competitor" means a company offering substantially similar products/services to the Company's core business in the UK market.
-
-Note: This restriction is limited in scope and duration to protect legitimate business interests while allowing the Employee reasonable career mobility.
-
-10.2 Non-Solicitation of Employees
-For twelve (12) months following termination, the Employee agrees not to solicit or recruit Company employees for employment elsewhere.
-
-10.3 Non-Solicitation of Customers
-For twelve (12) months following termination, the Employee agrees not to solicit Company customers with whom they had material contact during the final twelve months of employment.
-
-10.4 Reasonableness
-These restrictions are designed to be reasonable and necessary to protect legitimate business interests. If any restriction is deemed too broad, it shall be modified to the minimum extent necessary to be enforceable.
-
-11. GRIEVANCE AND DISCIPLINARY PROCEDURES
-
-11.1 Grievance Procedure
-If the Employee has a grievance related to employment, they should first raise it with their manager. If unresolved, formal grievance procedures are outlined in the Employee Handbook.
-
-11.2 Disciplinary Procedure
-Any disciplinary matters will be handled in accordance with the Company's disciplinary procedure and UK employment law, including ACAS guidelines.
-
-11.3 Right to Representation
-The Employee has the right to be accompanied by a colleague or trade union representative at formal grievance or disciplinary meetings.
-
-12. OUTSIDE ACTIVITIES
-
-12.1 Conflicts of Interest
-The Employee must avoid conflicts of interest and disclose any situations that might create a conflict, including:
-   a) Outside employment
-   b) Board positions
-   c) Significant investments in competitors
-   d) Personal relationships with suppliers/customers
-
-12.2 Outside Employment
-The Employee may engage in outside employment or consulting with advance written approval from the Company, provided it does not:
-   a) Interfere with Employee's duties
-   b) Compete with Company business
-   c) Use Company resources or confidential information
-
-13. HEALTH AND SAFETY
-
-13.1 Company Obligations
-The Company will provide a safe working environment and comply with all health and safety regulations.
-
-13.2 Employee Obligations
-The Employee must:
-   a) Comply with health and safety policies
-   b) Report hazards or incidents
-   c) Use safety equipment as required
-   d) Take reasonable care for their own safety and that of others
-
-14. EQUAL OPPORTUNITIES
-
-14.1 Company Policy
-The Company is an equal opportunity employer and does not discriminate on the basis of age, disability, gender, race, religion, sexual orientation, or any other protected characteristic.
-
-14.2 Harassment and Bullying
-The Company has zero tolerance for harassment, bullying, or discrimination. Such conduct may result in disciplinary action up to and including dismissal.
-
-15. CHANGES TO TERMS
-
-15.1 Modification
-The Company may make reasonable changes to employment terms by giving one month's written notice. Significant changes require the Employee's consent.
-
-15.2 Employee Handbook
-This Agreement should be read in conjunction with the Employee Handbook, which may be updated from time to time. The Employee will be notified of material changes.
-
-16. GENERAL PROVISIONS
-
-16.1 Entire Agreement
-This Agreement, together with the Employee Handbook and any referenced documents, constitutes the entire agreement between the parties regarding employment.
-
-16.2 Governing Law
-This Agreement is governed by the laws of England and Wales.
-
-16.3 Jurisdiction
-The parties submit to the exclusive jurisdiction of the courts of England and Wales.
-
-16.4 Severability
-If any provision is found to be unenforceable, it shall be modified to the minimum extent necessary, and the remainder of the Agreement remains in force.
-
-16.5 Notices
-Notices must be in writing and delivered to the addresses listed above or such other address as either party may designate in writing.
-
-17. ACCEPTANCE
-
-By signing below, the parties acknowledge that they have read, understood, and agree to be bound by the terms of this Agreement.
-
-
-EMPLOYER: InnovateTech Solutions Ltd.
-
-By: _______________________________
-Name: James Peterson
-Title: Chief Executive Officer
-Date: November 28, 2025
-
-
-EMPLOYEE:
-
-By: _______________________________
-Name: Sarah Williams
-Date: November 28, 2025
-
-
-APPENDIX A: PRE-EXISTING INTELLECTUAL PROPERTY
-
-[X] None
-[ ] See attached list
-
-
-[END OF AGREEMENT]
+ARTICLE 1 - POSITION AND DUTIES
+1.1 The Employee is hired for the position of Senior Product Manager.
+1.2 The Employee will report directly to the Chief Product Officer.
+1.3 Primary responsibilities include:
+    - Leading product strategy and roadmap development
+    - Managing cross-functional teams
+    - Analyzing market trends and user feedback
+    - Collaborating with engineering and design teams
+1.4 Duties may evolve with mutual agreement to support business needs and career development.
+
+ARTICLE 2 - EMPLOYMENT TYPE AND START DATE
+2.1 This is a permanent employment contract (CDI) under French law.
+2.2 Start date: December 1, 2025
+2.3 Probationary period: 4 months, renewable once by mutual written agreement for an additional 4 months.
+2.4 During probation, either party may terminate with notice: 
+    - 24 hours for first 8 days
+    - 48 hours from day 8 to end of first month
+    - 2 weeks thereafter
+    - 1 month if probation renewed
+
+ARTICLE 3 - COMPENSATION
+3.1 Annual gross salary: €65,000, paid in 12 equal monthly installments.
+3.2 Payment by bank transfer on the last business day of each month.
+3.3 Annual salary review based on performance and company results.
+3.4 Performance bonus: Up to 15% of annual salary based on achievement of agreed objectives (reviewed quarterly).
+
+ARTICLE 4 - BENEFITS
+4.1 Health insurance: Company provides complementary health insurance (mutuelle) covering 100% of premiums for Employee and 50% for dependents.
+4.2 Meal vouchers: €10 per working day (60% employer contribution).
+4.3 Transportation: 50% reimbursement of public transport pass (Navigo).
+4.4 Professional development: €2,000 annual budget for training, conferences, or certifications.
+4.5 Remote work: 2 days per week, with flexibility for additional remote days upon manager approval.
+4.6 Company equipment: Laptop, phone, and necessary work tools provided and maintained by Company.
+
+ARTICLE 5 - WORKING TIME
+5.1 39 hours per week (full-time), Monday to Friday.
+5.2 Schedule: Flexible within core hours of 10 AM - 4 PM; specific schedule agreed with manager.
+5.3 RTT (Reduction of Working Time): 22 days per year in addition to paid leave.
+5.4 Overtime compensated per French labor law and collective agreement.
+
+ARTICLE 6 - PAID LEAVE
+6.1 Annual paid leave: 25 working days (5 weeks) per full year of service, accrued monthly.
+6.2 Additional leave: Per collective agreement and French law (events, special circumstances).
+6.3 Leave requests submitted at least 2 weeks in advance for approval.
+6.4 Unused leave may be carried over per legal requirements.
+
+ARTICLE 7 - INTELLECTUAL PROPERTY
+7.1 Work created by Employee in the course of employment belongs to the Company.
+7.2 Employee retains rights to pre-existing intellectual property brought to the role.
+7.3 For inventions qualifying under French law, Employee entitled to fair compensation beyond salary if significant commercial value.
+7.4 Employee may reference work experience and projects in professional portfolio with Company approval (not to disclose confidential information).
+
+ARTICLE 8 - CONFIDENTIALITY
+8.1 Employee agrees to maintain confidentiality of proprietary business information during and after employment.
+8.2 This includes: business strategies, customer data, financial information, and unreleased products.
+8.3 Obligation continues for 3 years after employment ends.
+8.4 Employee may disclose information if required by law or court order, with prior notice to Company when possible.
+
+ARTICLE 9 - NON-COMPETE
+9.1 For 6 months following termination, Employee agrees not to work directly for companies in direct competition within the same product category.
+9.2 Geographic restriction: Paris metropolitan area.
+9.3 Compensation: Company pays 50% of last gross monthly salary for non-compete period.
+9.4 Company may waive this clause upon termination by written notice, releasing Employee immediately.
+9.5 If Company does not pay compensation, clause becomes void.
+
+ARTICLE 10 - TERMINATION
+10.1 Either party may terminate with written notice per French law:
+    - By Employee: 3 months notice
+    - By Employer: Follows legal notice periods based on seniority and collective agreement
+10.2 Notice period may be reduced by mutual written agreement.
+10.3 Termination must comply with French Labor Code and applicable collective agreements.
+10.4 Severance pay per French law for dismissal without serious misconduct.
+
+ARTICLE 11 - PROFESSIONAL EXPENSES
+11.1 Company reimburses reasonable business expenses upon submission of receipts.
+11.2 This includes: client meetings, business travel, professional materials.
+11.3 Expense reports submitted monthly through company system.
+
+ARTICLE 12 - DATA PROTECTION
+12.1 Personal data processed in accordance with GDPR.
+12.2 Employee has rights to access, rectify, and request deletion of personal data.
+12.3 Data retained only as long as necessary for employment and legal obligations.
+
+ARTICLE 13 - HEALTH AND SAFETY
+13.1 Company provides a safe working environment per French regulations.
+13.2 Employee must report any workplace hazards or accidents immediately.
+13.3 Regular health and safety training provided.
+
+ARTICLE 14 - ETHICAL STANDARDS
+14.1 Employee agrees to follow Company's Code of Conduct and ethics policies.
+14.2 Whistleblower protection available for reporting violations in good faith.
+
+ARTICLE 15 - MODIFICATIONS
+15.1 Any modifications to this contract require written agreement signed by both parties.
+15.2 Significant changes to role, compensation, or location require Employee consent.
+
+ARTICLE 16 - COLLECTIVE AGREEMENT
+16.1 This contract is subject to the applicable collective agreement (Convention Collective).
+16.2 More favorable provisions of collective agreement supersede this contract.
+
+ARTICLE 17 - DISPUTE RESOLUTION
+17.1 Any disputes should first be resolved through internal discussion with HR and management.
+17.2 If unresolved, either party may pursue resolution through the Conseil de Prud'hommes (Labor Court) in Paris.
+17.3 French law governs this employment relationship.
+
+ARTICLE 18 - LANGUAGE
+18.1 This contract is executed in French (authoritative version) with English translation provided for convenience.
+
+ARTICLE 19 - ENTIRE AGREEMENT
+This contract, together with the Company employee handbook and referenced policies, constitutes the complete agreement.
+
+ACCEPTED AND AGREED:
+
+EMPLOYER: InnovateTech France SAS
+Signature: _____________________
+Name: Thomas Rousseau
+Title: HR Director
+Date: November 2, 2025
+
+EMPLOYEE: Sophie Martin
+Signature: _____________________
+Date: November 2, 2025
+
+DOCUMENTS ATTACHED:
+- Company Employee Handbook
+- Code of Conduct
+- Remote Work Policy
+- Data Protection Notice

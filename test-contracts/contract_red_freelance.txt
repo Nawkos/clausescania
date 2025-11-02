@@ -1,230 +1,96 @@
-FREELANCE WEB DEVELOPMENT AGREEMENT
+FREELANCE SERVICE AGREEMENT
 
-This Freelance Web Development Agreement ("Agreement") is entered into as of October 15, 2025 ("Effective Date"), by and between:
+This Freelance Service Agreement ("Agreement") is entered into on November 2, 2025, between:
 
-CLIENT: TechCorp Industries Ltd.
-Address: 45 Silicon Valley Drive, London, UK
+CLIENT: TechCorp Solutions Inc.
+Address: 123 Business Street, Paris, France
 ("Client")
 
-and
+AND
 
-CONTRACTOR: John Smith
-Address: 12 Developer Street, Manchester, UK
+CONTRACTOR: Jean Dupont
+Address: 45 Rue de la Paix, Paris, France
 ("Contractor")
 
 1. SCOPE OF WORK
+The Contractor agrees to provide web development services as specified by the Client from time to time. The scope may be modified at the Client's sole discretion without additional compensation.
 
-1.1 The Contractor agrees to provide web development services as specified by the Client from time to time. The scope of work may be modified at the Client's sole discretion without additional compensation.
+2. COMPENSATION
+2.1 The Client agrees to pay €5,000 per month for services rendered.
+2.2 Payment will be made within 90 days of invoice receipt.
+2.3 Late payment penalties do not apply to the Client.
+2.4 The Contractor may not dispute invoices after 5 days of issuance.
 
-1.2 The Contractor shall be available for consultation, revisions, and emergency support 24 hours a day, 7 days a week, including weekends and public holidays.
+3. INTELLECTUAL PROPERTY RIGHTS
+3.1 All work product, including but not limited to code, designs, documentation, ideas, concepts, and any derivative works, shall become the exclusive property of the Client immediately upon creation.
+3.2 The Contractor hereby assigns all rights, title, and interest in perpetuity.
+3.3 The Contractor waives all moral rights and attribution rights.
+3.4 The Contractor may not use any work product created for portfolio purposes without written consent.
 
-1.3 The Contractor must respond to all Client requests within 2 hours of receipt, regardless of time of day.
-
-2. INTELLECTUAL PROPERTY RIGHTS
-
-2.1 ALL WORK PRODUCT: The Contractor hereby assigns, transfers, and conveys to the Client all right, title, and interest in and to any and all work product, including but not limited to:
-   a) All code, designs, documentation, and materials created during the term of this Agreement
-   b) All pre-existing intellectual property, tools, frameworks, and methodologies used by the Contractor
-   c) All derivative works, improvements, and modifications
-   d) All ideas, concepts, and know-how developed by the Contractor, whether or not related to the project
-
-2.2 This assignment includes all copyrights, patents, trade secrets, trademarks, and any other intellectual property rights worldwide, in perpetuity.
-
-2.3 The Contractor waives all moral rights to the work product.
-
-2.4 The Contractor agrees that any code, tools, or frameworks developed by the Contractor prior to this Agreement that are used in the project shall become the exclusive property of the Client.
-
-3. PAYMENT TERMS
-
-3.1 The Client agrees to pay the Contractor £50 per hour for services rendered.
-
-3.2 Invoices must be submitted monthly and payment will be made within 90 days of invoice receipt, at the Client's discretion.
-
-3.3 The Client reserves the right to withhold payment for any reason, including dissatisfaction with work quality as determined solely by the Client.
-
-3.4 No interest shall accrue on late payments.
-
-3.5 The Contractor must continue working during any payment disputes and may not cease work due to non-payment.
-
-4. LATE DELIVERY PENALTIES
-
-4.1 Time is of the essence in this Agreement. The Contractor shall deliver all work by the deadlines specified by the Client.
-
-4.2 For each day or partial day that any deliverable is late, the Contractor shall pay the Client liquidated damages of £1,000 per day.
-
-4.3 Delays caused by Client's failure to provide necessary materials, feedback, or approvals shall not excuse the Contractor's obligation to meet deadlines.
-
-4.4 These penalties are in addition to, not in lieu of, any other remedies available to the Client.
-
-4.5 The Client may deduct penalty amounts from any payments due to the Contractor.
+4. CONFIDENTIALITY
+4.1 The Contractor agrees to maintain strict confidentiality regarding all Client information.
+4.2 This obligation survives termination indefinitely.
+4.3 The Client has no reciprocal confidentiality obligations.
 
 5. TERM AND TERMINATION
-
-5.1 This Agreement shall commence on the Effective Date and continue until terminated by either party.
-
-5.2 CLIENT TERMINATION: The Client may terminate this Agreement at any time, for any reason or no reason, with or without cause, effective immediately upon written notice to the Contractor.
-
-5.3 CONTRACTOR TERMINATION: The Contractor may terminate this Agreement only by providing 90 days' written notice to the Client and paying a termination fee of £10,000.
-
-5.4 Upon termination by the Client for any reason:
-   a) The Contractor must immediately cease all work
-   b) The Contractor must deliver all work product, whether complete or incomplete
-   c) The Client shall have no obligation to pay for any incomplete work
-   d) The Contractor must return or destroy all Client materials within 24 hours
-
-5.5 The Client may terminate this Agreement immediately if the Contractor:
-   a) Fails to meet any deadline
-   b) Produces work that does not meet the Client's standards (as determined solely by the Client)
-   c) Is unavailable for more than 2 hours
-   d) Rejects any scope change requested by the Client
-
-6. UNLIMITED LIABILITY
-
-6.1 The Contractor assumes full and unlimited liability for any and all claims, damages, losses, and expenses arising from or related to the services provided under this Agreement.
-
-6.2 The Contractor agrees to indemnify, defend, and hold harmless the Client from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising from:
-   a) The Contractor's performance or non-performance of services
-   b) Any actual or alleged infringement of third-party intellectual property rights
-   c) Any errors, bugs, or defects in the work product
-   d) Any security vulnerabilities or data breaches
-   e) Any downtime or service interruptions
-   f) Any consequential, incidental, or indirect damages suffered by the Client or its customers
-
-6.3 There is no cap or limitation on the Contractor's liability under this Agreement.
-
-6.4 The Contractor's liability shall survive termination of this Agreement indefinitely.
-
-6.5 The Contractor shall maintain professional liability insurance with minimum coverage of £5,000,000, with the Client named as additional insured, at the Contractor's sole expense.
-
-7. EXCLUSIVITY AND NON-COMPETE
-
-7.1 During the term of this Agreement and for 5 years following termination, the Contractor shall not:
-   a) Provide web development services to any other client
-   b) Work for any company in the technology sector
-   c) Develop any software or applications, whether for compensation or not
-   d) Use any programming languages, frameworks, or tools used in the Client's project for any other purpose
-
-7.2 This non-compete restriction applies worldwide.
-
-7.3 Breach of this clause shall result in liquidated damages of £100,000 plus injunctive relief.
-
-8. CONFIDENTIALITY
-
-8.1 The Contractor acknowledges that all information received from or about the Client, including but not limited to business plans, customer lists, pricing, source code, and any materials related to the project, is confidential.
-
-8.2 The Contractor shall not disclose any confidential information to any third party at any time, without limitation.
-
-8.3 This confidentiality obligation survives termination indefinitely.
-
-8.4 The Contractor may not use any information learned during this engagement for any purpose other than performing services for the Client.
-
-8.5 The Contractor may not disclose the existence of this Agreement or the Client relationship to anyone, including in the Contractor's portfolio, resume, or marketing materials.
-
-9. REVISIONS AND CHANGES
-
-9.1 The Contractor shall make unlimited revisions to any work product at the Client's request, without additional compensation.
-
-9.2 The Client may change the scope of work, deadlines, or specifications at any time without notice.
-
-9.3 Scope changes shall not extend deadlines or increase compensation.
-
-9.4 The Contractor must accept all change requests, regardless of reasonableness or feasibility.
-
-10. WARRANTIES
-
-10.1 The Contractor warrants that all work product shall:
-   a) Be completely free of errors, bugs, and defects
-   b) Meet all of the Client's requirements, whether or not clearly specified
-   c) Function perfectly in all environments and use cases
-   d) Remain error-free and fully functional for a period of 10 years following delivery
-
-10.2 The Contractor shall provide unlimited free maintenance, support, and bug fixes for 10 years following project completion.
-
-10.3 If any defect is discovered at any time, the Contractor must fix it within 24 hours at no charge.
-
-11. INDEPENDENT CONTRACTOR STATUS
-
-11.1 The Contractor is an independent contractor and not an employee of the Client.
-
-11.2 However, the Contractor must:
-   a) Work exclusively on Client projects during business hours
-   b) Be available at times specified by the Client
-   c) Follow all Client policies and procedures
-   d) Obtain approval before taking any time off
-   e) Attend all Client meetings as required
-
-11.3 The Contractor is responsible for all taxes, insurance, and expenses.
-
-11.4 The Client provides no benefits, vacation time, or sick leave.
-
-12. WORK PRODUCT APPROVAL
-
-12.1 All work product must be approved by the Client before the Contractor may consider it complete.
-
-12.2 The Client may reject any work product for any reason, as determined in the Client's sole discretion.
-
-12.3 If work is rejected, the Contractor must revise it until it meets the Client's standards, without additional compensation or deadline extensions.
-
-12.4 The Client may withhold approval indefinitely.
-
-13. NO GUARANTEE OF WORK
-
-13.1 The Client makes no guarantee of minimum hours or compensation.
-
-13.2 There may be periods where no work is available, and the Contractor shall receive no compensation during such periods.
-
-13.3 The Contractor must remain available for work even during periods of no work assignment.
-
-14. DISPUTE RESOLUTION
-
-14.1 Any disputes arising from this Agreement shall be resolved exclusively through arbitration in London, England.
-
-14.2 The arbitrator shall be selected by the Client.
-
-14.3 The Contractor shall pay all arbitration costs and fees, including the Client's legal fees, regardless of the outcome.
-
-14.4 The Contractor waives the right to participate in any class action lawsuit.
-
-14.5 The arbitration decision shall be final and binding.
-
-15. GENERAL PROVISIONS
-
-15.1 This Agreement shall be governed by the laws of England and Wales.
-
-15.2 This Agreement may be amended by the Client at any time upon written notice to the Contractor. The Contractor's continued performance of services shall constitute acceptance of such amendments.
-
-15.3 The Client may assign this Agreement to any third party without the Contractor's consent. The Contractor may not assign this Agreement under any circumstances.
-
-15.4 If any provision of this Agreement is found to be unenforceable, it shall be modified to the minimum extent necessary to make it enforceable in favor of the Client.
-
-15.5 The Contractor acknowledges that they have had the opportunity to review this Agreement with legal counsel and enters into it voluntarily.
-
-15.6 No delay or failure by the Client to exercise any right shall constitute a waiver of that right.
-
-15.7 All notices to the Contractor may be sent via email. The Contractor must send all notices to the Client via registered mail to the address listed above.
-
-16. ENTIRE AGREEMENT
-
-This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, understandings, and agreements. Any modifications must be in writing and signed by the Client (but not necessarily by the Contractor).
-
-17. ACKNOWLEDGMENT
-
-By signing below, the Contractor acknowledges that they have read, understood, and agree to be bound by all terms and conditions of this Agreement, including but not limited to the intellectual property assignment, unlimited liability, non-compete restrictions, and penalty provisions.
-
-
-CLIENT: TechCorp Industries Ltd.
-
-By: _______________________________
-Name: Sarah Johnson
-Title: Chief Technology Officer
-Date: October 15, 2025
-
-
-CONTRACTOR:
-
-By: _______________________________
-Name: John Smith
-Date: ________________
-
-
-[END OF AGREEMENT]
+5.1 This Agreement shall remain in effect indefinitely until terminated.
+5.2 The Client may terminate this Agreement at any time without notice or cause.
+5.3 The Contractor must provide 90 days written notice to terminate.
+5.4 Upon termination by the Client, no compensation is owed for work in progress.
+
+6. NON-COMPETE AND NON-SOLICITATION
+6.1 During the term and for 5 years after termination, the Contractor shall not:
+    a) Provide services to any company in the technology sector
+    b) Work with any current or former clients of the Client
+    c) Solicit any employees, contractors, or clients of the Client
+6.2 This restriction applies globally without geographical limitation.
+
+7. LIABILITY AND INDEMNIFICATION
+7.1 The Contractor assumes all liability for any defects, errors, or issues in deliverables.
+7.2 The Contractor shall indemnify and hold harmless the Client from any and all claims, including legal fees.
+7.3 There is no limitation on the Contractor's liability.
+7.4 The Client's liability is limited to €100 for any and all claims.
+
+8. PENALTIES
+8.1 Late delivery of any milestone results in automatic penalties of €1,000 per day.
+8.2 Penalties begin immediately without grace period or notice.
+8.3 Quality issues subject to additional €500 per incident as determined solely by Client.
+
+9. WORK REQUIREMENTS
+9.1 The Contractor must be available 24/7 for urgent requests.
+9.2 Response time must not exceed 1 hour at any time, including weekends and holidays.
+9.3 The Contractor may not take vacation without 60 days advance notice and Client approval.
+
+10. MODIFICATIONS
+10.1 The Client may modify this Agreement at any time by providing written notice.
+10.2 Continued work after notification constitutes acceptance of modifications.
+
+11. DISPUTE RESOLUTION
+11.1 Any disputes shall be resolved exclusively in the courts of Delaware, USA.
+11.2 The Contractor waives the right to jury trial.
+11.3 The prevailing party in any dispute shall be entitled to attorney's fees from the non-prevailing party.
+
+12. REPRESENTATIONS AND WARRANTIES
+12.1 The Contractor represents that all work will be perfect, error-free, and meet unstated Client expectations.
+12.2 The Contractor provides unlimited warranty on all work in perpetuity.
+
+13. INSURANCE
+13.1 The Contractor must maintain professional liability insurance with minimum coverage of €5,000,000.
+13.2 Proof of insurance must be provided upon request.
+
+14. INDEPENDENT CONTRACTOR STATUS
+14.1 The Contractor is an independent contractor but must work exclusively for the Client.
+14.2 The Contractor may not engage in any other business activities without prior written consent.
+
+15. ENTIRE AGREEMENT
+This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements.
+
+ACCEPTED AND AGREED:
+
+CLIENT: TechCorp Solutions Inc.
+Signature: _____________________
+Date: November 2, 2025
+
+CONTRACTOR: Jean Dupont  
+Signature: _____________________
+Date: _______________

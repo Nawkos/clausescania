@@ -1,297 +1,116 @@
-SOFTWARE AS A SERVICE AGREEMENT
+SOFTWARE AS A SERVICE (SaaS) SUBSCRIPTION AGREEMENT
+
+This SaaS Subscription Agreement ("Agreement") is effective as of November 2, 2025, between:
+
+PROVIDER: CloudFlow Technologies SAS
+Address: 78 Avenue des Champs-Élysées, Paris, France
+("Provider")
+
+AND
+
+CUSTOMER: ABC Marketing Agency
+Address: 12 Rue du Commerce, Lyon, France
+("Customer")
+
+1. SERVICES PROVIDED
+1.1 Provider agrees to provide Customer access to the CloudFlow marketing automation platform.
+1.2 Services include: email automation, analytics dashboard, CRM integration, and customer support.
+1.3 Provider reserves the right to modify features with 30 days notice.
+
+2. SUBSCRIPTION TERM
+2.1 Initial term: 12 months from the effective date.
+2.2 Auto-renewal: This Agreement will automatically renew for successive 12-month periods unless either party provides written notice 60 days before the renewal date.
+2.3 Pricing may increase up to 15% upon each renewal.
+
+3. FEES AND PAYMENT
+3.1 Subscription fee: €599 per month, billed annually in advance (€7,188).
+3.2 Payment due within 15 days of invoice date.
+3.3 Late payments subject to 1.5% monthly interest charge.
+3.4 Provider may suspend services immediately upon payment default.
+3.5 All fees are non-refundable except as required by law.
+
+4. DATA OWNERSHIP AND PRIVACY
+4.1 Customer retains ownership of all Customer Data.
+4.2 Provider may use Customer Data for service improvement and analytics.
+4.3 Upon termination, Customer has 30 days to export data before permanent deletion.
+4.4 Provider complies with GDPR and standard data protection practices.
+
+5. INTELLECTUAL PROPERTY
+5.1 Provider retains all rights to the platform software and infrastructure.
+5.2 Customer receives a limited, non-exclusive license to use the services.
+5.3 Any custom integrations or features developed at Customer's request remain Provider's property.
+
+6. SERVICE LEVEL AND UPTIME
+6.1 Provider targets 99% monthly uptime (excluding scheduled maintenance).
+6.2 Scheduled maintenance may occur with 48 hours notice.
+6.3 Service credits: If uptime falls below 95%, Customer receives 10% monthly fee credit.
+6.4 Service credits are the Customer's sole remedy for downtime.
+
+7. SUPPORT
+7.1 Email support provided Monday-Friday, 9 AM - 6 PM CET.
+7.2 Response time target: 24 business hours for standard issues.
+7.3 Priority support available for additional €199/month.
+
+8. LIMITATION OF LIABILITY
+8.1 Provider's total liability shall not exceed the fees paid by Customer in the 12 months preceding the claim.
+8.2 Provider is not liable for indirect, consequential, or punitive damages.
+8.3 Customer is responsible for maintaining backups of their data.
+
+9. WARRANTIES AND DISCLAIMERS
+9.1 Services provided "as is" with no warranty of uninterrupted or error-free operation.
+9.2 Provider does not warrant that services will meet Customer's specific requirements.
+9.3 Provider disclaims all implied warranties to the extent permitted by law.
+
+10. TERMINATION
+10.1 Either party may terminate for cause with 30 days written notice if the other party materially breaches and fails to cure within 15 days.
+10.2 Customer may terminate for convenience by providing 60 days notice.
+10.3 Provider may terminate for convenience by providing 90 days notice.
+10.4 Upon termination, Customer must pay all fees through the end of the current subscription period.
+10.5 No refunds provided for early termination by Customer.
+
+11. CONFIDENTIALITY
+11.1 Both parties agree to protect confidential information disclosed during this Agreement.
+11.2 Confidentiality obligations survive termination for 3 years.
+11.3 Exceptions include information that is publicly available or independently developed.
+
+12. MODIFICATIONS TO AGREEMENT
+12.1 Provider may modify this Agreement by providing 30 days written notice via email.
+12.2 Continued use after the notice period constitutes acceptance of changes.
+12.3 Customer may terminate if they do not accept modifications.
+
+13. ACCEPTABLE USE POLICY
+13.1 Customer agrees not to use services for illegal activities, spam, or malicious purposes.
+13.2 Provider may suspend services immediately if violations are detected.
+13.3 Provider determines what constitutes a violation at its sole discretion.
+
+14. FORCE MAJEURE
+14.1 Neither party liable for delays or failures due to circumstances beyond reasonable control.
+14.2 This includes natural disasters, war, strikes, internet outages, or government actions.
+
+15. DISPUTE RESOLUTION
+15.1 Disputes should first be resolved through good faith negotiations.
+15.2 If unresolved after 30 days, disputes shall be submitted to mediation in Paris, France.
+15.3 If mediation fails, disputes shall be resolved in the courts of Paris, France.
+15.4 French law governs this Agreement.
+
+16. DATA PROCESSING ADDENDUM
+16.1 A separate Data Processing Agreement (DPA) is available upon request.
+16.2 Provider acts as a data processor for Customer's personal data.
+
+17. ENTIRE AGREEMENT
+This Agreement, including any referenced policies and addendums, constitutes the entire agreement between the parties.
 
-This Software as a Service Agreement ("Agreement") is made effective as of November 1, 2025 ("Effective Date") between:
+18. NOTICES
+All notices must be sent in writing to the addresses listed above or to email addresses on file.
 
-PROVIDER: CloudSolutions Inc.
-Address: 789 Tech Park, San Francisco, CA 94105, USA
-Email: legal@cloudsolutions.com
-("Provider" or "we")
+ACCEPTED AND AGREED:
 
-and
+PROVIDER: CloudFlow Technologies SAS
+Signature: _____________________
+Name: Marie Laurent, CEO
+Date: November 2, 2025
 
-CUSTOMER: Marketing Agency Pro Ltd.
-Address: 56 Business Street, Manchester, M1 4HT, UK
-Email: admin@marketingagencypro.com
-("Customer" or "you")
-
-WHEREAS, Provider offers cloud-based marketing automation software; and
-WHEREAS, Customer desires to subscribe to and use such software;
-
-NOW, THEREFORE, in consideration of the mutual covenants contained herein, the parties agree as follows:
-
-1. SERVICES
-
-1.1 Service Description
-Provider agrees to provide Customer with access to its cloud-based marketing automation platform ("Service"), which includes:
-   a) Email marketing tools
-   b) Social media management
-   c) Analytics and reporting
-   d) Customer relationship management features
-   e) Integration with third-party applications
-
-1.2 Service Level
-Provider will use commercially reasonable efforts to make the Service available 99.5% of the time, excluding scheduled maintenance windows.
-
-1.3 Scheduled Maintenance
-Provider may perform scheduled maintenance with 48 hours' notice. Emergency maintenance may be performed without notice.
-
-1.4 Support
-Provider offers email support during business hours (9 AM - 5 PM PST, Monday-Friday, excluding holidays). Response time is typically within 24-48 hours.
-
-2. SUBSCRIPTION AND FEES
-
-2.1 Subscription Plan
-Customer subscribes to the Professional Plan at £299 per month for up to 10,000 contacts and 100,000 email sends per month.
-
-2.2 Overage Charges
-If Customer exceeds plan limits:
-   a) Additional contacts: £0.05 per contact per month
-   b) Additional email sends: £0.02 per email
-   Overage charges will be billed in the following month.
-
-2.3 Payment Terms
-   a) Fees are payable monthly in advance via credit card
-   b) Payment is due on the 1st of each month
-   c) Late payments are subject to a £25 late fee plus 1.5% monthly interest
-   d) Provider may suspend Service if payment is more than 15 days overdue
-
-2.4 Price Changes
-Provider reserves the right to modify pricing with 30 days' written notice. Continued use of the Service after the notice period constitutes acceptance of the new pricing.
-
-2.5 No Refunds
-All fees are non-refundable. If Customer cancels mid-month, fees for that month will not be prorated.
-
-3. TERM AND RENEWAL
-
-3.1 Initial Term
-This Agreement commences on the Effective Date and continues for an initial period of twelve (12) months ("Initial Term").
-
-3.2 Automatic Renewal
-**IMPORTANT**: Unless either party provides written notice of non-renewal at least 30 days before the end of the Initial Term or any Renewal Term, this Agreement will automatically renew for successive twelve (12) month periods ("Renewal Terms") at the then-current pricing.
-
-3.3 Cancellation Policy
-Customer may cancel by providing written notice at least 30 days before the end of the current term. Cancellation during a term does not entitle Customer to a refund of fees already paid for that term.
-
-3.4 Provider Termination
-Provider may terminate this Agreement:
-   a) Immediately if Customer breaches any payment obligation
-   b) With 15 days' notice if Customer breaches any other term and fails to cure within such period
-   c) Immediately if Customer's use violates applicable laws or harms the Service or other customers
-
-3.5 Effect of Termination
-Upon termination:
-   a) Customer's access to the Service will be immediately disabled
-   b) Customer must pay all outstanding fees
-   c) Customer may request export of their data within 30 days (after which it will be deleted)
-
-4. DATA AND PRIVACY
-
-4.1 Customer Data
-Customer retains all ownership rights to data submitted to the Service ("Customer Data"). Customer grants Provider a license to use Customer Data solely to provide the Service.
-
-4.2 Data Security
-Provider implements industry-standard security measures to protect Customer Data, but does not guarantee that unauthorized access will never occur.
-
-4.3 Data Backup
-Provider performs regular backups but is not responsible for data loss. Customer is responsible for maintaining their own backup copies.
-
-4.4 Data Processing
-Provider processes Customer Data in accordance with its Privacy Policy. Provider may use third-party subprocessors located worldwide.
-
-4.5 GDPR Compliance
-If applicable, Provider will act as a data processor. A Data Processing Agreement is available upon request.
-
-5. ACCEPTABLE USE
-
-5.1 Prohibited Activities
-Customer shall not:
-   a) Send spam or unsolicited commercial email
-   b) Use the Service for illegal purposes
-   c) Attempt to gain unauthorized access to the Service
-   d) Reverse engineer or copy features of the Service
-   e) Use the Service to transmit viruses or malicious code
-   f) Violate any third-party rights
-
-5.2 Compliance
-Customer is responsible for ensuring their use complies with all applicable laws, including CAN-SPAM, GDPR, and PECR.
-
-5.3 Monitoring
-Provider reserves the right to monitor Customer's use to ensure compliance with this Agreement.
-
-5.4 Account Suspension
-Provider may suspend Customer's account immediately if Provider reasonably believes Customer is violating these terms.
-
-6. INTELLECTUAL PROPERTY
-
-6.1 Provider IP
-Provider retains all rights, title, and interest in the Service, including all software, technology, trademarks, and documentation.
-
-6.2 Customer IP
-Customer retains all rights to Customer Data and their own intellectual property.
-
-6.3 Feedback
-Any feedback, suggestions, or ideas provided by Customer to Provider may be used by Provider without obligation or compensation to Customer.
-
-7. CONFIDENTIALITY
-
-7.1 Confidential Information
-Each party may have access to confidential information of the other party. Both parties agree to protect such information using reasonable care.
-
-7.2 Exceptions
-Confidential information does not include information that:
-   a) Is publicly available through no fault of the receiving party
-   b) Was rightfully possessed before disclosure
-   c) Is independently developed
-   d) Must be disclosed by law
-
-7.3 Duration
-Confidentiality obligations survive for three (3) years after termination of this Agreement.
-
-8. WARRANTIES AND DISCLAIMERS
-
-8.1 Provider Warranties
-Provider warrants that:
-   a) It has the right to provide the Service
-   b) The Service will substantially conform to its documentation
-   c) It will use industry-standard measures to protect against viruses
-
-8.2 Customer Warranties
-Customer warrants that:
-   a) It has the right to use and submit Customer Data
-   b) Customer Data does not infringe third-party rights
-   c) Its use will comply with all applicable laws
-
-8.3 DISCLAIMER
-**EXCEPT AS EXPRESSLY PROVIDED ABOVE, THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. PROVIDER DISCLAIMS ALL OTHER WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.**
-
-8.4 Third-Party Services
-The Service may integrate with third-party services. Provider makes no warranties regarding such third-party services.
-
-9. LIMITATION OF LIABILITY
-
-9.1 Limitation of Damages
-**TO THE MAXIMUM EXTENT PERMITTED BY LAW, PROVIDER'S TOTAL LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT SHALL NOT EXCEED THE AMOUNT PAID BY CUSTOMER IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.**
-
-9.2 Exclusion of Consequential Damages
-**PROVIDER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, LOST DATA, OR BUSINESS INTERRUPTION.**
-
-9.3 Exceptions
-These limitations do not apply to:
-   a) Provider's gross negligence or willful misconduct
-   b) Breaches of confidentiality
-   c) Indemnification obligations
-
-10. INDEMNIFICATION
-
-10.1 Customer Indemnification
-Customer agrees to indemnify and hold Provider harmless from any claims arising from:
-   a) Customer Data
-   b) Customer's use of the Service
-   c) Customer's breach of this Agreement
-
-10.2 Provider Indemnification
-Provider agrees to indemnify Customer from claims that the Service infringes third-party intellectual property rights, provided that:
-   a) Customer promptly notifies Provider of the claim
-   b) Provider has sole control of the defense
-   c) Customer provides reasonable cooperation
-
-10.3 Remedies
-If the Service is found to infringe, Provider may (at its option):
-   a) Obtain the right for Customer to continue using the Service
-   b) Modify the Service to be non-infringing
-   c) Terminate the Agreement and refund prepaid fees for unused service
-
-11. INTEGRATION AND CUSTOMIZATION
-
-11.1 Third-Party Integrations
-The Service includes integrations with certain third-party platforms. Provider may add or remove integrations at any time.
-
-11.2 API Access
-Customer receives API access subject to rate limits and fair use policies detailed in the API documentation.
-
-11.3 Custom Development
-Custom development or integrations require a separate Statement of Work and additional fees.
-
-12. SUPPORT AND UPDATES
-
-12.1 Updates
-Provider may update the Service at any time. Updates may add, modify, or remove features.
-
-12.2 No Obligation to Update
-Provider has no obligation to provide any specific updates or features.
-
-12.3 Beta Features
-Provider may offer beta features. Beta features are provided "as is" and may be discontinued at any time.
-
-13. GENERAL PROVISIONS
-
-13.1 Entire Agreement
-This Agreement constitutes the entire agreement between the parties and supersedes all prior agreements and understandings.
-
-13.2 Amendments
-Provider may modify this Agreement by providing 30 days' notice. Continued use of the Service constitutes acceptance of modifications.
-
-13.3 Assignment
-Customer may not assign this Agreement without Provider's written consent. Provider may assign this Agreement to any successor or affiliate.
-
-13.4 Governing Law
-This Agreement is governed by the laws of California, USA, without regard to conflict of law provisions.
-
-13.5 Dispute Resolution
-Any disputes shall be resolved through binding arbitration in San Francisco, California, under the rules of the American Arbitration Association. Each party bears its own costs.
-
-13.6 Severability
-If any provision is found unenforceable, the remainder of the Agreement continues in full force.
-
-13.7 Waiver
-No waiver of any breach constitutes a waiver of any other breach.
-
-13.8 Force Majeure
-Neither party is liable for delays or failures due to circumstances beyond their reasonable control.
-
-13.9 Notices
-Notices must be sent to the email addresses listed above and are deemed received 24 hours after sending.
-
-13.10 Independent Contractors
-The parties are independent contractors. This Agreement does not create a partnership, agency, or joint venture.
-
-14. DEFINITIONS
-
-"Business Hours": 9 AM to 5 PM Pacific Time, Monday through Friday, excluding Provider holidays
-"Customer Data": All data submitted by Customer to the Service
-"Service": The cloud-based software platform and related services provided by Provider
-"User": An individual authorized by Customer to use the Service
-
-15. ADDITIONAL TERMS FOR SPECIFIC FEATURES
-
-15.1 Email Sending
-Customer must comply with all applicable anti-spam laws. Provider may limit or suspend sending if spam complaints exceed 0.1%.
-
-15.2 Storage Limits
-Customer receives 100 GB of storage. Additional storage is available at £0.10 per GB per month.
-
-15.3 User Seats
-The subscription includes 5 user seats. Additional seats are £29 per user per month.
-
-16. ACCEPTANCE
-
-By clicking "I Agree," signing below, or using the Service, Customer accepts all terms and conditions of this Agreement.
-
-
-PROVIDER: CloudSolutions Inc.
-
-By: _______________________________
-Name: Michael Chen
-Title: Chief Operating Officer
-Date: November 1, 2025
-
-
-CUSTOMER: Marketing Agency Pro Ltd.
-
-By: _______________________________
-Name: Emma Thompson  
-Title: Managing Director
-Date: November 1, 2025
-
-
-[END OF AGREEMENT]
+CUSTOMER: ABC Marketing Agency
+Signature: _____________________  
+Name: Pierre Dubois, Director
+Date: November 2, 2025

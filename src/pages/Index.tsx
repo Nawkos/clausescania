@@ -57,11 +57,19 @@ const Index = () => {
                 <p className="text-xs text-muted-foreground">The Yuka for Contracts</p>
               </div>
             </div>
-            <nav className="hidden md:flex items-center gap-6">
-              <a href="#" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Home</a>
-              <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">How it Works</a>
-              <a href="#examples" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Examples</a>
-              <a href="/about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
+            <nav className="hidden md:flex items-center gap-4">
+              <Button variant="ghost" size="sm" onClick={() => navigate("/getting-started")}>
+                Get Started
+              </Button>
+              <Button variant="ghost" size="sm" onClick={() => navigate("/how-it-works")}>
+                How It Works
+              </Button>
+              <Button variant="ghost" size="sm" onClick={() => navigate("/about-ai")}>
+                AI Models
+              </Button>
+              <Button variant="ghost" size="sm" onClick={() => navigate("/about")}>
+                About
+              </Button>
               <a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="sm" className="gap-2">
                   <Github className="w-4 h-4" />

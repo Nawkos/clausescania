@@ -1,10 +1,107 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.78.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+
+// Rate limiting configuration
+const RATE_LIMIT_WINDOW_HOURS = 1;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+
+async function checkRateLimit(ip: string): Promise<{ allowed: boolean; remaining: number }> {
+  const supabaseUrl = Deno.env.get("SUPABASE_URL");
+  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+  
+  if (!supabaseUrl || !supabaseServiceKey) {
+    console.error("[INTERNAL] Supabase configuration missing");
+    return { allowed: true, remaining: RATE_LIMIT_MAX_REQUESTS }; // Fail open in case of config issues
+  }
+
+  const supabase = createClient(supabaseUrl, supabaseServiceKey);
+  const endpoint = "analyze-contract";
+  const windowStart = new Date(Date.now() - RATE_LIMIT_WINDOW_HOURS * 60 * 60 * 1000);
+
+  try {
+    // Check existing rate limit record
+    const { data: existingLimit, error: fetchError } = await supabase
+      .from("rate_limits")
+      .select("*")
+      .eq("ip_address", ip)
+      .eq("endpoint", endpoint)
+      .single();
+
+    if (fetchError && fetchError.code !== "PGRST116") {
+      // PGRST116 = no rows found, which is fine
+      console.error("[INTERNAL] Rate limit check error:", fetchError);
+      return { allowed: true, remaining: RATE_LIMIT_MAX_REQUESTS };
+    }
+
+    if (existingLimit) {
+      const limitWindowStart = new Date(existingLimit.window_start);
+      
+      // Check if we're still within the same window
+      if (limitWindowStart > windowStart) {
+        if (existingLimit.request_count >= RATE_LIMIT_MAX_REQUESTS) {
+          return { allowed: false, remaining: 0 };
+        }
+        
+        // Increment counter
+        const { error: updateError } = await supabase
+          .from("rate_limits")
+          .update({ 
+            request_count: existingLimit.request_count + 1 
+          })
+          .eq("id", existingLimit.id);
+
+        if (updateError) {
+          console.error("[INTERNAL] Rate limit update error:", updateError);
+        }
+
+        return { 
+          allowed: true, 
+          remaining: RATE_LIMIT_MAX_REQUESTS - existingLimit.request_count - 1 
+        };
+      } else {
+        // Window expired, reset counter
+        const { error: resetError } = await supabase
+          .from("rate_limits")
+          .update({ 
+            request_count: 1,
+            window_start: new Date().toISOString()
+          })
+          .eq("id", existingLimit.id);
+
+        if (resetError) {
+          console.error("[INTERNAL] Rate limit reset error:", resetError);
+        }
+
+        return { allowed: true, remaining: RATE_LIMIT_MAX_REQUESTS - 1 };
+      }
+    } else {
+      // First request from this IP
+      const { error: insertError } = await supabase
+        .from("rate_limits")
+        .insert({
+          ip_address: ip,
+          endpoint: endpoint,
+          request_count: 1,
+          window_start: new Date().toISOString()
+        });
+
+      if (insertError) {
+        console.error("[INTERNAL] Rate limit insert error:", insertError);
+      }
+
+      return { allowed: true, remaining: RATE_LIMIT_MAX_REQUESTS - 1 };
+    }
+  } catch (error) {
+    console.error("[INTERNAL] Rate limit exception:", error);
+    return { allowed: true, remaining: RATE_LIMIT_MAX_REQUESTS };
+  }
+}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -12,6 +109,31 @@ serve(async (req) => {
   }
 
   try {
+    // Rate limiting check
+    const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() 
+      || req.headers.get("x-real-ip") 
+      || "unknown";
+    
+    const { allowed, remaining } = await checkRateLimit(clientIp);
+    
+    if (!allowed) {
+      return new Response(
+        JSON.stringify({ 
+          error: "Rate limit exceeded. You can analyze up to 5 contracts per hour. Please try again later." 
+        }), 
+        {
+          status: 429,
+          headers: { 
+            ...corsHeaders, 
+            "Content-Type": "application/json",
+            "X-RateLimit-Limit": RATE_LIMIT_MAX_REQUESTS.toString(),
+            "X-RateLimit-Remaining": "0",
+            "X-RateLimit-Reset": new Date(Date.now() + RATE_LIMIT_WINDOW_HOURS * 60 * 60 * 1000).toISOString()
+          },
+        }
+      );
+    }
+
     const requestBody = await req.json();
     
     // Validate input with Zod
@@ -134,7 +256,12 @@ Analyze for these specific risks:
     const analysisResult = JSON.parse(data.choices[0].message.content);
 
     return new Response(JSON.stringify(analysisResult), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      headers: { 
+        ...corsHeaders, 
+        "Content-Type": "application/json",
+        "X-RateLimit-Limit": RATE_LIMIT_MAX_REQUESTS.toString(),
+        "X-RateLimit-Remaining": remaining.toString()
+      },
     });
   } catch (error) {
     // Log detailed error server-side only

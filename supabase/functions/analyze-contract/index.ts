@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -11,7 +12,35 @@ serve(async (req) => {
   }
 
   try {
-    const { contractText, contractType } = await req.json();
+    const requestBody = await req.json();
+    
+    // Validate input with Zod
+    const contractSchema = z.object({
+      contractText: z.string()
+        .min(10, "Contract text is too short (minimum 10 characters)")
+        .max(100000, "Contract text exceeds maximum length (100,000 characters)")
+        .trim()
+        .refine(
+          (text) => !/[\x00-\x08\x0B\x0C\x0E-\x1F]/.test(text),
+          "Contract text contains invalid control characters"
+        ),
+      contractType: z.string()
+        .min(1, "Contract type is required")
+        .max(50, "Contract type is too long")
+        .trim()
+    });
+
+    const validationResult = contractSchema.safeParse(requestBody);
+    
+    if (!validationResult.success) {
+      const errorMessage = validationResult.error.errors[0]?.message || "Invalid input";
+      return new Response(JSON.stringify({ error: errorMessage }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    const { contractText, contractType } = validationResult.data;
     
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
@@ -74,21 +103,31 @@ Analyze for these specific risks:
     });
 
     if (!response.ok) {
+      // Log detailed errors server-side only (not exposed to client)
+      console.error("[INTERNAL] AI gateway error:", {
+        status: response.status,
+        statusText: response.statusText,
+        timestamp: new Date().toISOString()
+      });
+      
       if (response.status === 429) {
-        return new Response(JSON.stringify({ error: "Rate limits exceeded, please try again later." }), {
+        return new Response(JSON.stringify({ error: "Service is currently busy. Please try again in a few moments." }), {
           status: 429,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
       if (response.status === 402) {
-        return new Response(JSON.stringify({ error: "Payment required, please add funds to your Lovable AI workspace." }), {
+        return new Response(JSON.stringify({ error: "Service temporarily unavailable. Please contact support." }), {
           status: 402,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
-      const errorText = await response.text();
-      console.error("AI gateway error:", response.status, errorText);
-      throw new Error("AI gateway error");
+      
+      // Generic error message to client
+      return new Response(JSON.stringify({ error: "Unable to process your request. Please try again later." }), {
+        status: 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     const data = await response.json();
@@ -98,9 +137,15 @@ Analyze for these specific risks:
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Error in analyze-contract function:", error);
-    const errorMessage = error instanceof Error ? error.message : "Unknown error occurred";
-    return new Response(JSON.stringify({ error: errorMessage }), {
+    // Log detailed error server-side only
+    console.error("[INTERNAL] Error in analyze-contract function:", {
+      error: error instanceof Error ? error.message : "Unknown error",
+      stack: error instanceof Error ? error.stack : undefined,
+      timestamp: new Date().toISOString()
+    });
+    
+    // Return generic error to client
+    return new Response(JSON.stringify({ error: "An error occurred while analyzing your contract. Please try again." }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });

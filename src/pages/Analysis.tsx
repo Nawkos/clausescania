@@ -94,10 +94,16 @@ const Analysis = () => {
         description: "Your contract has been analyzed successfully",
       });
     } catch (error) {
-      console.error("Analysis error:", error);
+      // Only log minimal info, not full error details
+      console.error('Contract analysis failed');
+      
+      const errorMessage = error instanceof Error && error.message.includes('error') 
+        ? 'Unable to analyze contract. Please try again.'
+        : 'There was an error analyzing your contract. Please try again.';
+      
       toast({
         title: "Analysis failed",
-        description: "There was an error analyzing your contract. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
       

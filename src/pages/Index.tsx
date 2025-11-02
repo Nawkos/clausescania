@@ -61,6 +61,13 @@ const Index = () => {
               <a href="#" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Home</a>
               <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">How it Works</a>
               <a href="#examples" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Examples</a>
+              <a href="/about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
+              <a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="sm" className="gap-2">
+                  <Github className="w-4 h-4" />
+                  GitHub
+                </Button>
+              </a>
             </nav>
           </div>
         </div>
@@ -444,19 +451,19 @@ const Index = () => {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#how-it-works" className="hover:text-primary transition-colors">How it Works</a></li>
                 <li><a href="#examples" className="hover:text-primary transition-colors">Examples</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
+                <li><a href="/about-ai" className="hover:text-primary transition-colors">AI Technology</a></li>
+                <li><a href="/about" className="hover:text-primary transition-colors">About Project</a></li>
               </ul>
             </div>
 
             {/* Company */}
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
+              <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+                <li><a href="/about" className="hover:text-primary transition-colors">About</a></li>
+                <li><a href="/about#privacy" className="hover:text-primary transition-colors">Privacy Policy</a></li>
+                <li><a href="/about#terms" className="hover:text-primary transition-colors">Terms of Service</a></li>
+                <li><a href="https://github.com/yourusername/clausescan-ai" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Documentation</a></li>
               </ul>
             </div>
 
@@ -471,8 +478,22 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2024 ClauseScan AI. All rights reserved.</p>
+          <div className="border-t border-border pt-8">
+            <div className="text-center mb-6">
+              <p className="text-sm font-semibold mb-3">📚 CITATIONS & ATTRIBUTIONS</p>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>AI Models:</strong> Google Gemini, Legal-BERT • 
+                <strong> Development:</strong> Lovable.dev • 
+                <strong> UI:</strong> shadcn/ui • 
+                <strong> Icons:</strong> Lucide React
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Made with ❤️ using cutting-edge AI • Open Source • Educational Project
+              </p>
+            </div>
+            <div className="text-center text-sm text-muted-foreground">
+              <p>© 2025 ClauseScan AI. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </footer>

@@ -184,13 +184,22 @@ This project was created for the **SPOC IA** course at ESSEC Business School to 
 
 ---
 
-## Performance Metrics
+## Testing & Validation
 
-- **Average Analysis Time:** 28 seconds
-- **Success Rate:** 99.2%
-- **Testing:** Tested against multiple contract scenarios
-- **Contracts Analyzed:** 12,847+
-- **User Satisfaction:** High satisfaction in testing
+**Development Testing:**
+- **Analysis Time:** ~30 seconds average per contract
+- **Test Scenarios:** 20+ diverse contracts across multiple categories
+- **Contract Types Validated:**
+  - Employment agreements
+  - Freelance contracts
+  - SaaS subscriptions
+  - NDAs and service agreements
+
+**Validation Results:**
+- **Risk Detection:** Successfully identifies common contract pitfalls
+- **Output Quality:** Structured analysis with actionable recommendations
+
+**Note:** This is an academic proof-of-concept demonstrating AI application to legal document analysis. For production use, additional validation would be required.
 
 ---
 

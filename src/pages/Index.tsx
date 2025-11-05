@@ -102,8 +102,22 @@ const Index = () => {
             </p>
 
             {/* Upload Zone */}
-            <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.15s' }}>
+            <div className="mb-4 animate-fade-in" style={{ animationDelay: '0.15s' }}>
               <FileUpload onFileSelect={handleFileSelect} />
+            </div>
+
+            {/* Rate Limit Notice */}
+            <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.18s' }}>
+              <div className="max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 border-2 border-blue-200 dark:border-blue-800 rounded-xl p-4">
+                <div className="flex items-center justify-center gap-3">
+                  <Zap className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                  <p className="text-sm font-semibold text-center">
+                    <span className="text-blue-600 dark:text-blue-400">50 Free Analyses Per Hour</span>
+                    <span className="text-muted-foreground mx-2">•</span>
+                    <span className="text-muted-foreground">No account needed</span>
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Trust Badges */}

@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { extractTextFromPDF, isPDF } from "@/utils/pdfParser";
 
 interface Alert {
   id: string;
@@ -123,12 +124,43 @@ const Analysis = () => {
   };
 
   const readFileContent = async (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e) => resolve(e.target?.result as string);
-      reader.onerror = reject;
-      reader.readAsText(file);
-    });
+    try {
+      // Handle PDF files with dedicated parser
+      if (isPDF(file)) {
+        setStatusMessage("Extracting text from PDF...");
+        const text = await extractTextFromPDF(file);
+        
+        // Validate minimum content length
+        if (text.length < 50) {
+          throw new Error('PDF appears empty or scanned. Try converting to TXT format.');
+        }
+        
+        return text;
+      }
+      
+      // Handle text-based files (TXT, DOCX)
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const content = e.target?.result as string;
+          
+          // Validate text content
+          if (!content || content.trim().length < 50) {
+            reject(new Error('File appears to be empty. Please upload a valid contract document.'));
+            return;
+          }
+          
+          resolve(content);
+        };
+        reader.onerror = () => reject(new Error('Could not read file. Please try again.'));
+        reader.readAsText(file);
+      });
+    } catch (error) {
+      if (error instanceof Error) {
+        throw error;
+      }
+      throw new Error('Could not read file. Please ensure it is a valid PDF, DOCX, or TXT file.');
+    }
   };
 
   const getExampleContract = (type: string): string => {

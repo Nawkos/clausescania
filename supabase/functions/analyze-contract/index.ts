@@ -7,9 +7,9 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Rate limiting configuration
+// Rate limiting configuration - generous for development/testing
 const RATE_LIMIT_WINDOW_HOURS = 1;
-const RATE_LIMIT_MAX_REQUESTS = 5;
+const RATE_LIMIT_MAX_REQUESTS = 50; // Increased to 50 per hour for testing
 
 async function checkRateLimit(ip: string): Promise<{ allowed: boolean; remaining: number }> {
   const supabaseUrl = Deno.env.get("SUPABASE_URL");
@@ -119,7 +119,7 @@ serve(async (req) => {
     if (!allowed) {
       return new Response(
         JSON.stringify({ 
-          error: "Rate limit exceeded. You can analyze up to 5 contracts per hour. Please try again later." 
+          error: `Rate limit exceeded. You can analyze up to ${RATE_LIMIT_MAX_REQUESTS} contracts per hour. Please try again later.` 
         }), 
         {
           status: 429,

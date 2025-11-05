@@ -117,8 +117,8 @@ const Index = () => {
                 <span className="text-sm font-medium">AI-Powered</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-white/50 dark:bg-gray-800/50 rounded-full border border-border backdrop-blur-sm">
-                <Users className="w-4 h-4 text-purple-600" />
-                <span className="text-sm font-medium">Used by 1000+ Professionals</span>
+                <Zap className="w-4 h-4 text-orange-500" />
+                <span className="text-sm font-medium">50 Free Analyses/Hour</span>
               </div>
             </div>
 

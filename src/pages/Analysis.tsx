@@ -104,17 +104,33 @@ const Analysis = () => {
         description: "Your contract has been analyzed successfully",
       });
     } catch (error) {
-      // Only log minimal info, not full error details
       console.error('Contract analysis failed');
       
-      const errorMessage = error instanceof Error && error.message.includes('error') 
-        ? 'Unable to analyze contract. Please try again.'
-        : 'There was an error analyzing your contract. Please try again.';
+      let errorTitle = "Analysis failed";
+      let errorMessage = "There was an error analyzing your contract. Please try again.";
+      
+      if (error instanceof Error) {
+        // PDF extraction errors - provide helpful guidance
+        if (error.message.includes('readable text') || 
+            error.message.includes('scanned') ||
+            error.message.includes('formatting issues') ||
+            error.message.includes('password-protected') ||
+            error.message.includes('corrupted')) {
+          errorTitle = "PDF could not be read";
+          errorMessage = error.message;
+        } else if (error.message.includes('empty')) {
+          errorTitle = "File appears empty";
+          errorMessage = "The uploaded file appears to be empty or unreadable. Please upload a valid contract document.";
+        } else {
+          errorMessage = error.message;
+        }
+      }
       
       toast({
-        title: "Analysis failed",
+        title: errorTitle,
         description: errorMessage,
         variant: "destructive",
+        duration: 8000, // Longer duration for important error messages
       });
       
       // Fallback to mock data for demo
@@ -124,16 +140,20 @@ const Analysis = () => {
   };
 
   const readFileContent = async (file: File): Promise<string> => {
+    console.log('=== FILE PROCESSING START ===');
+    console.log('Format:', file.type);
+    console.log('Filename:', file.name);
+    console.log('Size:', file.size, 'bytes');
+    
     try {
       // Handle PDF files with dedicated parser
       if (isPDF(file)) {
         setStatusMessage("Extracting text from PDF...");
         const text = await extractTextFromPDF(file);
         
-        // Validate minimum content length
-        if (text.length < 50) {
-          throw new Error('PDF appears empty or scanned. Try converting to TXT format.');
-        }
+        console.log('=== PDF PROCESSING COMPLETE ===');
+        console.log('Extracted length:', text.length, 'characters');
+        console.log('First 300 chars:', text.substring(0, 300));
         
         return text;
       }
@@ -143,6 +163,10 @@ const Analysis = () => {
         const reader = new FileReader();
         reader.onload = (e) => {
           const content = e.target?.result as string;
+          
+          console.log('=== TXT PROCESSING COMPLETE ===');
+          console.log('Content length:', content.length, 'characters');
+          console.log('First 300 chars:', content.substring(0, 300));
           
           // Validate text content
           if (!content || content.trim().length < 50) {
@@ -156,6 +180,9 @@ const Analysis = () => {
         reader.readAsText(file);
       });
     } catch (error) {
+      console.error('=== FILE PROCESSING FAILED ===');
+      console.error('Error:', error);
+      
       if (error instanceof Error) {
         throw error;
       }
